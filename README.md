@@ -1,5 +1,5 @@
 
-##Regras do Grupo da Sprint
+## Regras do Grupo da Sprint
 
 Comunicar se estiver com dificuldade<br>
 Justificar faltas/atrasos em reuniões<br>
