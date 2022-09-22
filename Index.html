@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquatec</title>
+    <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<body>
+    <div class="header">
+            <div class="container">
+                <h1>Agreen Solutions</h1>
+                <ul class="navbar">
+                    <a href="#Home"><li>Inicial</li></a>
+                    <a href="#Sobre"><li>Sobre</li></a>
+                    <a href="#Simulador"><li>Simulador</li></a>
+                    <a href="#Login"><li>Login</li></a>
+                    <a href="#Cadastro"><li>Cadastro</li></a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="container">
+               <p>Preservando <span>hoje</span> para existirem <span>amanhã</span></p>
+               </div>
+        </div>
+
+        <div class="social">
+            <div class="container">
+                <div class="boxes">
+                    <div class="box">
+                        <h1>Sobre</h1>
+                        <p>Agreen Solutions, é uma empresa de tecnologia que tem por objetivo desenvolver soluções digitais com foco em monitorar a temperatura e umidade do ar nos sistemas alimentares das alfaces, durante sua cadeia de abastecimento.</p>
+                    </div>
+                    <div class="box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998145.png" alt="icone de visão">
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="simulador">
+            <div class="container">
+                <div class="formSim">
+                <p>Escolha o tipo da alface que você trabalha.</p>
+                <select id="slcAlface" >
+                    <option value="19.00">Alface Crespa (24 unidades)</option>
+                    <option value="23.00">Alface Lisa (18 unidades)</option>
+                    <option value="19.50">Alface Americana (12 unidades)</option>
+                </select>
+                <p>Quantas caixas de alface você comprou?</p>
+                 <input type="text" id="txtAlface" sutofocus>
+                <br>
+                <button onclick="calc()" class="btnSim">Calcular</button>
+                <p id="p_msg" class="p_msg"></p>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <h4>Feito com amor por um aluno &hearts; Sptech &copy; 2022</h4>
+            </div>
+        </div>
+    
+
+
+    
+
+
+</body>
+
+</html>
+
+
+    <script>
+    function calc() {
+        var valorAlface = slcAlface.value;
+        var qtdAlface = txtAlface.value;
+        var total = valorAlface * qtdAlface;
+        var totalPreju = total*0.81
+        p_msg.innerHTML = "O lucro com prejuízo de 19% é: " + totalPreju+"<br>";
+        p_msg.innerHTML += "O lucro com a nossa solução é: " + total;  
+    }
+</script>
