@@ -1,5 +1,5 @@
 
-![Logo] (Agreen.png)
+![Logo](visual/Agreen.png)
 
 
 # Agreen Solutions
@@ -15,10 +15,10 @@ abastecimento, com objetivo de reduzir as perdas de nossos clientes.
 
 | Cor               | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
-| Cor exemplo       | ![#80BB3B](https://via.placeholder.com/10/80BB3Bf?text=+) #80BB3B |
-| Cor exemplo       | ![#BDDC3F](https://via.placeholder.com/10/BDDC3F?text=+) #BDDC3F |
-| Cor exemplo       | ![#39844F](https://via.placeholder.com/10/39844F?text=+) #39844F |
-| Cor exemplo       | ![#7FBA3C](https://via.placeholder.com/10/7FBA3C?text=+) #7FBA3C |
+| Cor exemplo       | ![#80bb3b](https://via.placeholder.com/10/80bb3b?text=+) #80bb3b |
+| Cor exemplo       | ![#bddc3f](https://via.placeholder.com/10/bddc3f?text=+) #bddc3f |
+| Cor exemplo       | ![#39844f](https://via.placeholder.com/10/39844f?text=+) #39844f |
+| Cor exemplo       | ![#7fba3c](https://via.placeholder.com/10/7fba3c?text=+) #7fba3c |
 
 
 ## Documentação
