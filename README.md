@@ -1,5 +1,5 @@
 
-![Logo](<img src="visual/Agreen.png" alt="agreen" width="400px">)
+![Logo](<img src="visual/Agreen.png" width="400px">)
 
 
 # Agreen Solutions
