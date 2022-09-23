@@ -15,7 +15,7 @@ abastecimento, com objetivo de reduzir as perdas de nossos clientes.
 
 | Cor               | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
-| Cor exemplo       | ![#80bb3b](https://via.placeholder.com/10/80bb3b?text=+) color: #80bb3b; |
+| Cor exemplo       | ![#80bb3b](https://via.placeholder.com/10/80bb3b?text=+) #80bb3b |
 | Cor exemplo       | ![#bddc3f](https://via.placeholder.com/10/bddc3f?text=+) #bddc3f |
 | Cor exemplo       | ![#39844f](https://via.placeholder.com/10/39844f?text=+) #39844f |
 | Cor exemplo       | ![#7fba3c](https://via.placeholder.com/10/7fba3c?text=+) #7fba3c |
