@@ -30,25 +30,14 @@ cpf char (11),
 telCel char (11)
 );
 
-
-create table login (
-idLogin int primary key auto_increment,
-fkClienteLogin int, 
-constraint fkcliente foreign key (fkcliente)
-references cliente (idCliente),
-primary key (idLogin, fkCliente),
-login varchar (45),
-senha varchar(12)
-);
-
 create table leitura (
 idLeitura int primary key auto_increment,
 temperatura varchar (45),
 umidade varchar (45),
 dataehorario datetime,
-fklogin int,
-constraint foreign key (fklogin)
-references login (idLogin)
+fkEmpresa int,
+constraint foreign key (fkEmpresa)
+references Empresa (idEmpresa)
 );
 
 create table sensor (
