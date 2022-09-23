@@ -1,0 +1,8 @@
+cor 1 = #80BB3B
+cor 2 = #BDDC3F
+
+fonte-nome = viga-regular
+cor = #39844F 
+
+fonte-slogan = rajdhani regular =
+cor = #7FBA3C
