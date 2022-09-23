@@ -1,3 +1,12 @@
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: .8em;
+}
+
 body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -7,11 +16,14 @@ body {
 .header {
     color: #0f8b2e;
     border-bottom: solid 3px #0f8b2e;
-    /* border: solid 3px green; */
+    width: 100%;
+    background-color: #f1f1f1;
+    z-index: 1;
+    
 }
 
 .container {
-    /* border: solid 3px yellow; */
+
     width: 80%;
     margin: auto;
 }
@@ -20,6 +32,12 @@ body {
 .header .container {
     display: flex;
     justify-content: space-between;
+    
+}
+
+.header .container img {
+    width: 100px;
+    height: 100px;
 }
 
 .navbar {
@@ -29,28 +47,55 @@ body {
     color: black;
     list-style: none;
     align-items: center;
+
+
 }
 
 .navbar a {
     text-decoration: none;
     color: black;
+    font-size: 18px;
+    font-weight: 500;
 }
-
-.navbar a:hover {
+.navbar .login {
+    border: 1px solid #0f8b2e;
+    color: black;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.navbar .link:hover {
     color: green;
     transition: 0.5s;
-    font-size: 20px;
 }
+
+.navbar .login:hover{
+    background-color: #0f8b2e;
+    color: white;
+    transition: 0.5s;
+}
+
+
 
 /* Banner */
 
 .banner {
-
     color: white;
     padding: 40px 0;
     min-height: 450px;
     background-image: url("https://img.freepik.com/fotos-premium/alface-em-horta_1373-801.jpg?w=2000");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    
+
+
+
+
 
 }
 
@@ -84,6 +129,7 @@ body {
     width: 170px;
 }
 
+
 .social .container .boxes {
     display: flex;
     height: 560px;
@@ -98,16 +144,21 @@ body {
     align-items: center;
     width: 50%;
 }
-
-.box p {
-    text-align: left;
-    width: 300px;
-    font-size: 24px;
+.box h1 {
+    font-size: 34px;
+    font-weight: 500;
 }
 
+.box p {
+    text-align: justify;
+    width: 300px;
+    font-size: 20px;
+}
+
+
 .box img {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
 
 }
 
@@ -146,7 +197,7 @@ body {
 }
 
 .simulador input {
-    width: 300px;
+    width: 250px;
     height: 20px;
     border: none;
     border-radius: 5px;
@@ -181,9 +232,77 @@ body {
     font-weight: 800;
 
 }
+.contato .container .form-flex {
+    display: flex;
+    height: 560px;
+    justify-content: center;
+    align-items: space-between;
+
+}
+
+.container .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.container .form input {
+    width: 400px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    background-color: #f1f1f1;
+}
+
+.container .form textarea{
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    background-color: #f1f1f1;
+}
+.container .form button {
+    width: 425px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #0f8b2e;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background-color: #b0e9be;
+    color: black;
+    transition: 0.5s;
+}
+
+.form img{
+    width: 350px;
+    height: 350px;
+    margin: 120px;
+}
+
 .footer {
-    background-color: #32b9cd;
-    height: 150px;
+    background-color: #0f8b2e;
+    height: 100px;
     color: #fff;
     display: flex;
 }
