@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGREEN</title>
+    <link rel="icon" href="./assets/imgs/Agreen.png">
+    <link rel="stylesheet" href="styleLogin.css">
+
+</head>
+
+<body>
+    
+    <div class="login">
+    <div class="banner-login">
+        <div class="banner-img">
+            <p>Seja <span>Bem-vindo</span></p>
+        </div>
+
+        
+        
+    </div>
+    <div class="form-login">
+        <p>E-mail:</p>
+        <input type="text" placeholder="Digite seu e-mail">
+        <p>Senha:</p>
+        <div class="form-login-password">
+        <input type="password" placeholder="Digite sua senha" class="senha">
+
+        <img src="./assets/icon/eye.png" alt="Olho senha" class="btn">
+        </div>
+        <button>Login</button>
+        <span>Não tem uma conta?</span><a href="cadastro.html"> Cadastre-se</a>
+    </div>
+</div>
+
+<script>
+    const senha = document.querySelector('.senha');
+    const olho = document.querySelector('.btn');
+
+    olho.onclick = () => {
+        if(senha.type === 'password'){
+            senha.type = 'text';
+            olho.src = './assets/icon/blind.png';
+        }else{
+            senha.type = 'password';
+        }
+    }
+</script>
+
+    
+
+    
+
+    
+
+    
+
+        
+
+
+
+
+
+
+</body>
+
+</html>
+

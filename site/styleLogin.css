@@ -1,0 +1,153 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: .8em;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #F1f1f1;
+}
+
+.login {
+	display: flex;
+	flex-direction: row;
+}
+
+.banner-login {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	width: 950px;
+	background-size: cover;
+	background-image: url("https://portalvidalivre.com/uploads/content/image/26018/Design_sem_nome__22_.png");
+}
+
+.banner-login .banner-img {
+    height: 100vh;
+	width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-login .banner-img p{
+	color: #fff;
+    font-size: 36px;
+
+    width: 280px;
+}
+
+.banner-login .banner-img span {
+    font-weight: 800;
+}
+
+.form-login {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.form-login p {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.form-login input {
+	width: 250px;
+	height: 40px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	border: 0;
+	outline: 0;
+	border-bottom: 2px solid #0f8b2e;
+	background-color: #F1f1f1;
+}
+
+.form-login .form-login-password {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.form-login input:focus {
+	border-bottom: 2px solid #b0e9be;
+	transition: 1s;
+}
+
+.form-login input::placeholder {
+	color: #000;
+}
+
+.form-login button {
+	width: 250px;
+	height: 40px;
+	border: 0;
+	outline: 0;
+	background-color: #0f8b2e;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.form-login button:hover {
+	background-color: #b0e9be;
+	transition: 1s;
+	color: #000;
+}
+.form-login span {
+	margin-top: 20px;
+	font-size: 16px;
+}
+
+.form-login a {
+	color: #0f8b2e;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.form-login a:hover {
+	color: #0E543F;
+	transition: 1s;
+}
+
+.form-login img {
+	width: 16px;
+	height: 16px;
+	margin-top: 20px;
+	position: absolute;
+	right: 75px;
+	z-index: 100;
+	cursor: pointer;
+
+}
+
+
