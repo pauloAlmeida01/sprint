@@ -107,7 +107,7 @@ body {
 }
 
 .form-login button {
-	width: 250px;
+	width: 265px;
 	height: 40px;
 	border: 0;
 	outline: 0;
@@ -142,7 +142,7 @@ body {
 .form-login img {
 	width: 16px;
 	height: 16px;
-	margin-top: 20px;
+	margin-top: 15px;
 	position: absolute;
 	right: 75px;
 	z-index: 100;
