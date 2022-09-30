@@ -1,8 +1,8 @@
 create database agreen;
 use agreen;
 
-create table cliente (
-idCliente int primary key auto_increment,
+create table empresa (
+idEmpresa int primary key auto_increment,
 nome varchar (45),
 CNPJ char (14),
 email varchar (45),
