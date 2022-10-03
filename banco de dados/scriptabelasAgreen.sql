@@ -15,6 +15,8 @@ constraint foreign key (fkendereco)
 references enderecoEmpresa (idEndereco)
 );
 
+--comentario
+
 create table enderecoEmpresa (
 idEndereco int primary key auto_increment,
 cep char (8),
