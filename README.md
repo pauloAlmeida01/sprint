@@ -1,5 +1,5 @@
 
-![Logo](visual/Agreen.png)
+![Logo](assets/imgs/Agreen.png)
 
 
 # Agreen Solutions
@@ -23,7 +23,7 @@ abastecimento, com objetivo de reduzir as perdas de nossos clientes.
 
 ## Documentação
 
-[Documentação](documentacao/Agreen%20Solutions%20Doc.pdf)
+[Documentação](https://bandteccom-my.sharepoint.com/:w:/g/personal/paulo_rsantos_sptech_school/ESFpkHWj6ItOon2nAhjoxeABfZtP_9YYd-xfXTMOppaykg?e=BAxoIL)
 
 
 ## Autores
