@@ -20,12 +20,6 @@ abastecimento, com objetivo de reduzir as perdas de nossos clientes.
 | Cor exemplo       | ![#39844f](https://via.placeholder.com/10/39844f?text=+) #39844f |
 | Cor exemplo       | ![#7fba3c](https://via.placeholder.com/10/7fba3c?text=+) #7fba3c |
 
-
-## Documentação
-
-[Documentação](https://bandteccom-my.sharepoint.com/:w:/g/personal/paulo_rsantos_sptech_school/ESFpkHWj6ItOon2nAhjoxeABfZtP_9YYd-xfXTMOppaykg?e=BAxoIL)
-
-
 ## Autores
 
 - [@alanaquinoslv](https://github.com/alanaquinoslv)
