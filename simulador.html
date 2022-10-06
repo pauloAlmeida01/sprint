@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGREEN</title>
+    <link rel="icon" href="./assets/imgs/Agreen.png">
+    <link rel="stylesheet" href="styleSimulador.css">
+
+</head>
+
+    <body id="Home">
+        <div class="header" >
+            <div class="container">
+                <a href="#logo"><img src="assets/imgs/Agreen.png"  alt="Agreen"></a>
+                <ul class="navbar">
+                    <a href="Index.html" class="link">
+                        <li>Inicial</li>
+                    </a>
+                    <a href="Index.html" class="link">
+                        <li>Sobre</li>
+                    </a>
+                    <a href="#simulador" class="link">
+                        <li>Simulador</li>
+                    </a>
+                    <a href="Index.html" class="link">
+                        <li>Contato</li>
+                    </a>
+                    <a href="login.html" class="login">
+                        <li>Login</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+
+    <div class="simulador" id="simulador">
+        <div class="container">
+            <div class="formSim">
+                <p>Escolha o tipo da alface que você trabalha.</p>
+                <select id="slcAlface">
+                    <option value="">Selecione tipo da Alface</option>
+                    <option value="19.00">Alface Crespa (24 unidades)</option>
+                    <option value="23.00">Alface Lisa (18 unidades)</option>
+                    <option value="19.50">Alface Americana (12 unidades)</option>
+                </select>
+                <p>Quantas caixas de alface você comprou?</p>
+                <input type="text" id="txtAlface">
+                <br>
+                <button onclick="calc()" class="btnSim">Calcular</button>
+                <br><br>
+                <p id="p_msg" class="p_msg"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="script_financeiro.js"></script>

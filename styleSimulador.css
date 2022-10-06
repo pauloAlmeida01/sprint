@@ -1,0 +1,159 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* :target {
+    scroll-margin-top: 5em;
+} */
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(http://www.agronovas.com.br/wp-content/uploads/2019/02/Cr%C3%A9dito-Rural-735x400.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.header {
+    color: #0f8b2e;
+    border-bottom: solid 3px #0f8b2e;
+    width: 100%;
+    height: 100px;
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .container img {
+    width: 100px;
+    height: 100px;
+}
+
+.navbar {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    color: black;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+.navbar .login {
+    border: 1px solid #0f8b2e;
+    color: black;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.navbar .link:hover {
+    color: green;
+    transition: 0.5s;
+}
+
+.navbar .login:hover{
+    background-color: #0f8b2e;
+    color: white;
+    transition: 0.5s;
+}
+
+.simulador {
+    display: flex;
+}
+
+.simulador .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 45em;
+}
+.simulador .formSim {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, 0.38);
+}
+.simulador p {
+    font-size: 25px;
+}
+.simulador select {
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    background-color: #d6dada;
+}
+
+.simulador input {
+    width: 250px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    background-color: #d6dada;
+}
+.simulador .btnSim {
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #0f8b2e;
+    cursor: pointer;
+}
+.simulador .btnSim:hover {
+    background-color: #d6dada;
+    color: black;
+    transition: 0.5s;
+}
+
+.simulador .p_msg {
+    font-size: 20px;
+    color: black;
+    font-weight: 800;
+}
