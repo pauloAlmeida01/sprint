@@ -1,18 +1,21 @@
 create database agreen;
 use agreen;
 
-create table empresa (
-idEmpresa int primary key auto_increment,
-nome varchar (45),
-CNPJ char (14),
+create table usuario (
+idUsuario INT primary key auto_increment,
 email varchar (45),
-telFixo char (10),
-fkrepresentante int,
-constraint foreign key (fkrepresentante) 
-references representante (idRep), 
-fkendereco int,
-constraint foreign key (fkendereco)
-references enderecoEmpresa (idEndereco)
+CNPJ char (14),
+senha varchar (20)
+); 
+
+create table empresa (
+CNPJ INT primary key,
+nome varchar (45),
+tipo varchar(20), constraint chkTipo 
+check (tipo in ('Filial','Matriz')),
+fkusuario int,
+constraint foreign key (fkusuario) 
+references usuario (idUsuario) 
 );
 
 --comentario
@@ -22,14 +25,11 @@ idEndereco int primary key auto_increment,
 cep char (8),
 rua varchar (45),
 bairro varchar (45),
-num int);
-
-
-create table representante (
-idRep int primary key auto_increment,
-nome varchar (45),
-cpf char (11),
-telCel char (11)
+num int,
+Descricao varchar (100)
+fkempresacnpj INT,
+constraint foreign key (fkempresacnpj)
+references empresa (CNPJ)
 );
 
 create table leitura (
@@ -47,7 +47,10 @@ idSensor int primary key auto_increment,
 atividade varchar (45),
 fkleitura int,
 constraint fkleitura foreign key (fkleitura)
-references leitura (idLeitura)
+references leitura (idLeitura),
+fkSensorEmpresa int,
+constraint fkSensorEmpresa foreign key (fkSensorEmpresa)
+references empresa (CNPJ)
 );
 
 
