@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGREEN</title>
+    <link rel="icon" href="./assets/imgs/Agreen.png">
+    <link rel="stylesheet" href="css/styleCadastro.css">
+
+    <script src="./js/funcoes.js"></script>
+
+</head>
+
+<body>
+    <div class="form-container">
+    <div class="form-login">
+
+        <div class="form-title">
+            <p>Cadastre-se</p>
+        </div>
+
+        <div class="form-input">
+            <p>Nome:</p>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-input">
+            <p>Telefone Fixo:</p>
+            <input type="tel" id="telefone" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-input">
+            <p>CNPJ:</p>
+            <input type="text" id="cnpj" placeholder="Digite seu CNPJ">
+        </div>
+
+        <div class="form-input">
+            <p>E-mail:</p>
+            <input type="text" placeholder="Digite seu e-mail" id="email">
+        </div>
+        
+
+        <div class="form-input">
+            <p>Senha:</p>
+            <div class="form-login-password1">
+        <input type="password" placeholder="Digite sua senha" class="senha" id="senha">
+        <img src="./assets/icon/eye.png" alt="olho" class="btn">
+
+        </div>
+        </div>
+
+        <div class="form-input">
+        <p>Confirmar senha:</p>
+        <div class="form-login-password2">
+        <input type="password" placeholder="Confirme sua senha" class="senha1" id="confirmSenha">
+        <img src="./assets/icon/eye.png" alt="olho" class="btn1">
+        </div>
+        </div>
+
+        <div class="form-button">
+        <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script src="js/scriptCadastro.js"></script>
+
+<script>
+    function cadastrar() {
+       // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome.value
+        var telefoneVar = telefone.value
+        var cnpjVar = cnpj.value
+        var emailVar = email.value
+        var senhaVar = senha.value
+        var confirmSenhaVar = confirmSenha.value
+
+        if (nomeVar == "" || telefoneVar == "" || cnpjVar == "" || emailVar == "" || senhaVar == "" || confirmSenhaVar == "") {
+            //cardErro.style.display = "block"
+            alert("Mensagem de erro para todos os campos em branco")
+
+            //finalizarAguardar();
+            return false;
+        }
+        else {
+            //setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                telefoneServer: telefoneVar,
+                cnpjServer: cnpjVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                confirmSenhaServer: confirmSenhaVar
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                //cardErro.style.display = "block";
+
+                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...")
+
+                setTimeout(() => {
+                    window.location = "./login.html";
+                }, "2000")
+                
+                //limparFormulario();
+                //finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+
+        return false;
+    }
+
+   /* function sumirMensagem() {
+        cardErro.style.display = "none"
+    }*/
+
+</script>
