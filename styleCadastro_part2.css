@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+:target {
+    scroll-margin-top: .8em;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url("https://img.freepik.com/fotos-gratis/vista-superior-vegetais-e-frutas-alface-tomate-pepino-endro-tomate-cereja-abobrinha-cebola-verde-salsa-maca-limao-kiwi-tabua-redonda-de-madeira-no-centro_140725-59433.jpg?w=2000");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.form-container {
+	display: flex;
+    justify-content: center;
+    width: 900px;
+    height: 550px;
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    background-color: #f1f1f1
+}
+
+.form-login {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login .form-input input {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    font-size: 14px;
+    background-color: #f1f1f1;
+}
+
+.form-login .form-input input:focus {
+    border-bottom: 2px solid #0f8b2e;
+    transition: 1s;
+}
+
+.form-input p {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    width: 40%;
+}
+
+.form-title {
+    width: 100%;
+    height: 50px;
+    color: #000;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-button button {
+    width: 770px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    background-color: #0f8b2e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-button button:hover {
+    background-color: #000;
+    transition: 1s;
+}
+
+.form-login .form-login-password1 img {
+    width: 1.172vw;
+    height: 2.943vh;
+    position: absolute;
+    right: 51.5%;
+    margin-top: 1.5%;
+    cursor: pointer;
+}
+
+.form-login .form-login-password2 img {
+    width: 1.172vw;
+    height: 2.943vh;
+    position: absolute;
+    margin-top: 1.5%;
+    left: 76.5%;
+    cursor: pointer;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
