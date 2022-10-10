@@ -9,48 +9,41 @@ senha varchar (20)
 ); 
 
 create table empresa (
-CNPJ INT primary key,
-nome varchar (45),
-tipo varchar(20), constraint chkTipo 
-check (tipo in ('Filial','Matriz')),
+idEmpresa INT PRIMARY KEY,
 fkusuario int,
 constraint foreign key (fkusuario) 
-references usuario (idUsuario) 
+references usuario (idUsuario),
+nome Varchar(45),
+CNPJ char (14),
+nome varchar (45),
+CEP CHAR(9),
+Num INT,
+logradouro varchar (45),
+complemento varchar (45),
+cidade varchar (45)
 );
+ 
 
---comentario
 
-create table enderecoEmpresa (
-idEndereco int primary key auto_increment,
-cep char (8),
-rua varchar (45),
-bairro varchar (45),
-num int,
-Descricao varchar (100)
-fkempresacnpj INT,
-constraint foreign key (fkempresacnpj)
-references empresa (CNPJ)
-);
+-- comentario
+
 
 create table leitura (
 idLeitura int primary key auto_increment,
 temperatura varchar (45),
 umidade varchar (45),
-dataehorario datetime,
-fkEmpresa int,
-constraint foreign key (fkEmpresa)
-references Empresa (idEmpresa)
+data_horario datetime,
+fksensor int,
+constraint foreign key (fksensor)
+references sensor (idsensor)
 );
 
 create table sensor (
 idSensor int primary key auto_increment,
 atividade varchar (45),
-fkleitura int,
-constraint fkleitura foreign key (fkleitura)
-references leitura (idLeitura),
 fkSensorEmpresa int,
 constraint fkSensorEmpresa foreign key (fkSensorEmpresa)
-references empresa (CNPJ)
+references empresa (idEmpresa)
 );
 
 
