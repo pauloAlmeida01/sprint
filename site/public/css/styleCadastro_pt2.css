@@ -34,7 +34,7 @@ body {
     margin-top: 5vh;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    background-color: #f1f1f1;
+    background-color: #f1f1f1
 }
 
 .form-login {
@@ -46,8 +46,8 @@ body {
 }
 
 .form-login .form-input input {
-    width: 250px;
-    margin: 30px;
+    width: 350px;
+    margin: 10px;
     padding: 10px;
     border: none;
     border-bottom: 1px solid #000;
@@ -72,7 +72,7 @@ body {
     width: 100%;
     height: 50px;
     color: #000;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     font-weight: 500;
 }
@@ -94,6 +94,29 @@ body {
     background-color: #000;
     transition: 1s;
 }
+
+.form-login .form-login-password1 img {
+    width: 1.172vw;
+    height: 2.943vh;
+    position: absolute;
+    right: 51.5%;
+    margin-top: 1.5%;
+    cursor: pointer;
+}
+
+.form-login .form-login-password2 img {
+    width: 1.172vw;
+    height: 2.943vh;
+    position: absolute;
+    margin-top: 1.5%;
+    left: 76.5%;
+    cursor: pointer;
+
+
+}
+
+
+
 
 
 

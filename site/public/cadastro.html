@@ -123,10 +123,10 @@
             if (resposta.ok) {
                 //cardErro.style.display = "block";
 
-                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...")
+                alert("Cadastro realizado com sucesso! Redirecionando para a próxima tela de cadastro...")
 
                 setTimeout(() => {
-                    window.location = "./login.html";
+                    window.location = "./cadastro-2.html";
                 }, "2000")
                 
                 //limparFormulario();
@@ -135,6 +135,7 @@
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
+            alert("Email ou CPNJ já existente!");
             console.log(`#ERRO: ${resposta}`);
             //finalizarAguardar();
         });

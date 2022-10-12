@@ -17,7 +17,7 @@
     <div class="form-login">
 
         <div class="form-title">
-            <p>Cadastre-se</p>
+            <p>Cadastrar Endereço da empresa</p>
         </div>
 
         <div class="form-input">
@@ -49,7 +49,7 @@
         </div>
 
         <div class="form-button">
-        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="cadastrar2()">Cadastrar</button>
         </div>
     </div>
 </div>
@@ -62,22 +62,20 @@
 
 </html>
 
-<script src="js/scriptCadastro.js"></script>
 
 <script>
-    function cadastrar() {
+    function cadastrar2() {
        // aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome.value
-        var telefoneVar = telefone.value
-        var cnpjVar = cnpj.value
-        var emailVar = email.value
-        var senhaVar = senha.value
-        var confirmSenhaVar = confirmSenha.value
+        var cepVar = cep.value
+        var numeroVar = numero.value
+        var logradouroVar = logradouro.value
+        var complementoVar = complemento.value
+        var cidadeVar = cidade.value
 
-        if (nomeVar == "" || telefoneVar == "" || cnpjVar == "" || emailVar == "" || senhaVar == "" || confirmSenhaVar == "") {
+        if (cepVar == "" || numeroVar == "" || logradouroVar == "" || complementoVar == "" || cidadeVar == "") {
             //cardErro.style.display = "block"
             alert("Mensagem de erro para todos os campos em branco")
 
@@ -89,7 +87,7 @@
         }
 
         // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
+        fetch("/usuarios/cadastrar2", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -97,12 +95,11 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                telefoneServer: telefoneVar,
-                cnpjServer: cnpjVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar,
-                confirmSenhaServer: confirmSenhaVar
+                cepServer: cepVar,
+                numeroServer: numeroVar,
+                logradouroServer: logradouroVar,
+                complementoServer: complementoVar,
+                cidadeServer: cidadeVar
 
             })
         }).then(function (resposta) {
@@ -112,7 +109,7 @@
             if (resposta.ok) {
                 //cardErro.style.display = "block";
 
-                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...")
+                alert("Cadastro realizado com sucesso! Redirecionando para a tela de login...")
 
                 setTimeout(() => {
                     window.location = "./login.html";
