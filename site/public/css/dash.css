@@ -108,29 +108,49 @@ body {
 }
 
 .header-info .info {
-    width: 30%;
-    height: 100%;
+    width: 25%;
+    height: 90%;
     display: flex;
+    border-radius: 5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgb(160, 156, 156);
 
 }
 
 .info p {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
-    margin: 10px;
     border-radius: 10px;
-    text-align: center;
+    text-align: justify;
+    width: 90%;
+    height:4vh;
 }
 
 .info span {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 500;
-    margin: 10px;
     border-radius: 10px;
-    text-align: center;
+    text-align: justify;
+    height: 5vh;
+    width: 85%;
+}
+
+.info .s_leg {
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    text-align: justify;
+    height: 5vh;
+    padding: 10px;
+    width: 85%;
+}
+
+.info:hover {
+    box-shadow: 0px 0px 10px 0px #0f8b2e;
+    transition: 1s;
 }
 
 .conteudo .cards {
@@ -151,15 +171,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #000;
     border-radius: 10px;
     margin: 10px;
-    background-color: #0f8b2e;
+    background-color: #fff;
+}
+
+.cards .card-info:hover {
+    background-color: #fff;
+    width: 33vw;
+    height: 33vh;
+    transition: 0.8s;
 }
 
 .card-info .p-card {
     width: 100%;
-    height: 10%;
+    height: 1vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -167,22 +193,28 @@ body {
 
 .card-info .s-card {
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
+
+
+
 .card-info p {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
     margin: 10px;
     border-radius: 10px;
 }
 
 .card-info .temp {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
+    width: 80%;
+    padding: 5px;
 }
 
 
@@ -199,5 +231,5 @@ body {
     width: 50px;
     height: 50px;
     margin: 10px;
-    fill: red;
+    fill: rgb(240, 66, 66);
 }
