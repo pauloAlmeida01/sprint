@@ -55,12 +55,28 @@ body {
 
 .form-login {
 	height: 100vh;
-	width: 100%;
+	width: 90%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
+.spanSeta {
+	position: absolute;
+	top: 1px;
+	right: 330px;
+	font-size: 60px;
+	color: #000;
+	text-decoration: none;
+}
+
+.spanSeta:hover {
+	color: #0f8b2e;
+	transition: .8s;
+}
+
+
 .form-login p {
 	font-size: 20px;
 	font-weight: 500;
@@ -114,11 +130,10 @@ body {
 	color: #000;
 }
 .form-login span {
-	margin-top: 20px;
 	font-size: 16px;
 }
 
-.form-login a {
+.form-login .cad-a {
 	color: #0f8b2e;
 	text-decoration: none;
 	font-weight: 600;

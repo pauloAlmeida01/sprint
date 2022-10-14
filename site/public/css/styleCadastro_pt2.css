@@ -56,6 +56,20 @@ body {
     background-color: #f1f1f1;
 }
 
+.spanSeta {
+	position: absolute;
+	top: 30px;
+	left: 250px;
+	font-size: 60px;
+	color: #000;
+	text-decoration: none;
+}
+
+.spanSeta:hover {
+	color: #0f8b2e;
+	transition: .8s;
+}
+
 .form-login .form-input input:focus {
     border-bottom: 2px solid #0f8b2e;
     transition: 1s;
