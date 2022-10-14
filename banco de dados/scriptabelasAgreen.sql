@@ -23,11 +23,6 @@ complemento varchar (45),
 cidade varchar (45)
 );
  
-
-
--- comentario
-
-
 create table leitura (
 idLeitura int primary key auto_increment,
 temperatura varchar (45),
