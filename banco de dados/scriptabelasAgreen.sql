@@ -5,22 +5,25 @@ create table usuario (
 idUsuario INT primary key auto_increment,
 email varchar (45),
 CNPJ char (14),
-senha varchar (20)
+senha varchar (20),
+fkempresa int,constraint foreign key (fkempresa) references usuario (idUsuario)
 ); 
 
 create table empresa (
 idEmpresa INT PRIMARY KEY,
-fkusuario int,
-constraint foreign key (fkusuario) 
-references usuario (idUsuario),
 nome Varchar(45),
-CNPJ char (14),
-nome varchar (45),
-CEP CHAR(9),
-Num INT,
-logradouro varchar (45),
-complemento varchar (45),
-cidade varchar (45)
+tipo varchar(45),
+email varchar(45),
+telFixo char(11)
+);
+
+create table enderecoEmpresa (
+idEndereco int primary key auto_increment,
+cep char (8),
+rua varchar (45),
+bairro varchar (45),
+num int,
+fkempresa int,constraint foreign key (fkempresa) references Endereco (idEndereco)
 );
  
 create table leitura (
@@ -36,10 +39,13 @@ references sensor (idsensor)
 create table sensor (
 idSensor int primary key auto_increment,
 atividade varchar (45),
+nome varchar(45),
 fkSensorEmpresa int,
 constraint fkSensorEmpresa foreign key (fkSensorEmpresa)
 references empresa (idEmpresa)
 );
+
+
 
 
 
