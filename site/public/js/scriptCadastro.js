@@ -22,3 +22,37 @@ const senha = document.querySelector('.senha');
         }
     }
     }
+    function cadastrar() {
+        var nome = ipt_nome.value
+        var telefone = ipt_telefone.value
+        var cnpj = ipt_cnpj.value
+        var senha = ipt_senha.value
+        var confirmacao = ipt_confirmSenha.value
+        var email = ipt_email.value
+        if (telefone == '') {
+            alert('Você precisa digitar o seu telefone!')
+        }
+        if (cnpj == '') {
+            alert('Você precisa digitar seu CNPJ!')
+        }
+        if (senha == '') {
+            alert('Digite sua senha.')
+        }
+        if (confirmacao == '') {
+            alert('Não se esqueça de confirmar sua senha.')
+        }
+        if (email == '') {
+            alert('Digite o seu email')
+        }
+        if (telefone.length < 10 || telefone.length > 10) {
+            alert('Digite um número de telefone válido!')
+        }
+        if (cnpj.length < 14 || cnpj.lenght > 14) {
+            alert('Digite um CNPJ válido!')
+        }
+        if (senha != confirmacao) {
+            alert('A senha e a confirmação não coincidem!')
+        }
+        if (email.includes("@") && email.includes(".")) {}
+        else{alert('Digite um email válido!')}
+    }

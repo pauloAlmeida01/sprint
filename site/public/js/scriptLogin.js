@@ -10,3 +10,6 @@ var senha = document.querySelector('.senha');
             olho.src = './assets/icon/eye.png';
         }
     }
+    function entrar() {
+        
+    }
