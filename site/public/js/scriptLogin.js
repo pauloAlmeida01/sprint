@@ -13,10 +13,14 @@ var senha = document.querySelector('.senha');
     function entrar() {
         var email = ipt_email.value
         var senha = ipt_senha.value
-        if (email.includes("@") && email.includes(".")) {}
-        else{alert("Digite um email válido!")}
-        if (senha == '') {
+        var campos_validos = "no";
+        if (!email.includes("@")) {alert("Digite um email válido!")}
+        else if (senha == '') {
             alert('Digite uma senha válida!')
         }
-        window.location.replace("dashboard/dashboard.html");
+        else{campos_validos = "yes";}
+        
+        if (campos_validos == "yes") {
+            window.location.replace("dashboard/dashboard.html");
+        }
         }
