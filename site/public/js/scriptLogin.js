@@ -11,5 +11,12 @@ var senha = document.querySelector('.senha');
         }
     }
     function entrar() {
-        
-    }
+        var email = ipt_email.value
+        var senha = ipt_senha.value
+        if (email.includes("@") && email.includes(".")) {}
+        else{alert("Digite um email válido!")}
+        if (senha == '') {
+            alert('Digite uma senha válida!')
+        }
+        window.location.replace("dashboard/dashboard.html");
+        }
