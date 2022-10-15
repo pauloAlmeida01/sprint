@@ -11,6 +11,7 @@ function closeModal() {
 
 const modal2 = document.querySelector('.modal2-container')
 
+
 function openModal2() {
   modal.classList.add('active')
 }

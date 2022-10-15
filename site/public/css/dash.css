@@ -227,22 +227,82 @@ body {
 
 /* Modal */
 .modal-container {
-    width: 80vw;
+    width: 90vw;
+    height: 90vh;
     top: 30px;
     display: none;
     position: fixed;
     z-index: 999;
     justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    
+}
+
+.modal-container2 {
+    width: 90vw;
+    height: 90vh;
+    top: 30px;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    
 }
 
 .modal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 30px;
     background-color: white;
     border-radius: 10px;
-    width: 50%;
+    width: 90%;
+    height: 90%;
+    z-index: 999;
 }
+.kpi {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+    align-items:center;   
+}
+
+.kpi .kpi-1 {
+    width: 40%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 0px rgb(160, 156, 156);
+    border: 1px solid gray;
+}
+
+.graficos {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.grafico-1 {
+    width: 35vw;
+    height: 25vh;
+}
+
+.grafico-2 {
+    width: 35vw;
+    height: 25vh;
+}
+
 
 .active {
     display: flex;
@@ -266,8 +326,10 @@ body {
 
 .btns {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
     margin-top: 10px;
+    height: 10%;
 }
 
 .btns button {
