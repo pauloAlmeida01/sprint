@@ -1,205 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/dash.css" />
+    <link rel="icon" href="../assets/imgs/Agreen_-_White_with_Black.png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/dash.css" />
-  <link rel="icon" href="../assets/imgs/Agreen_-_White_with_Black.png" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+  </head>
 
-  <title>Dashboard</title>
-</head>
+  <body>
+    <div class="container">
+      <div class="navbar-vert">
+        <navbar class="vert">
+          <figure>
+            <img src="../assets/imgs/Agreen.png" alt="logo" />
+          </figure>
+          <p>Olá Usuário!</p>
 
-<body>
-  <div class="container">
-    <div class="navbar-vert">
-      <navbar class="vert">
-        <figure>
-          <img src="../assets/imgs/Agreen.png" alt="logo" />
-        </figure>
-        <p>Olá Usuário!</p>
-
-        <ul>
-          <li><a href="dashboard.html">Cards</a></li>
-          <li><a href="graficos.html">Gráficos</a></li>
-          <li><a href="login.html">Sair</a></li>
-        </ul>
-      </navbar>
-    </div>
-
-    <div class="conteudo">
-      <div class="header-info">
-        <div class="info">
-          <p>Temperatura Máxima Sem.</p>
-          <span>25&deg;</span>
-          <span class="s_leg">Lorem</span>
-        </div>
-        <div class="info">
-          <p>Temperatura Máxima Sem.</p>
-          <span>25&deg;</span>
-          <span class="s_leg">Lorem</span>
-        </div>
-
-        <div class="info">
-          <p>Temperatura Máxima Sem.</p>
-          <span>25&deg;</span>
-          <span class="s_leg">Lorem</span>
-        </div>
-
-        <div class="info">
-          <p>Temperatura Máxima Sem.</p>
-          <span>25&deg;</span>
-          <span class="s_leg">Lorem</span>
-        </div>
-
+          <ul>
+            <li><a href="dashboard.html">Cards</a></li>
+            <li><a href="graficos.html">Gráficos</a></li>
+            <li><a href="login.html">Sair</a></li>
+          </ul>
+        </navbar>
       </div>
 
-      <div class="cards" id="cards">
-        <div class="modal-container">
-          <div class="modal">
-            <h2>Umidade e Temperatura:</h2>
-            <hr />
-            <div class="grafico-1">
-              <canvas id="myChart"></canvas>
-            </div>
-            <hr />
-            <div class="btns">
-              <button class="btnClose" onclick="closeModal()" id="close">Fechar</button>
-            </div>
+      <div class="conteudo">
+        <div class="header-info">
+          <div class="info">
+            <p>Temperatura Máxima Sem.</p>
+            <span>25&deg;</span>
+            <span class="s_leg">Lorem</span>
+          </div>
+          <div class="info">
+            <p>Temperatura Máxima Sem.</p>
+            <span>25&deg;</span>
+            <span class="s_leg">Lorem</span>
+          </div>
+
+          <div class="info">
+            <p>Temperatura Máxima Sem.</p>
+            <span>25&deg;</span>
+            <span class="s_leg">Lorem</span>
+          </div>
+
+          <div class="info">
+            <p>Temperatura Máxima Sem.</p>
+            <span>25&deg;</span>
+            <span class="s_leg">Lorem</span>
           </div>
         </div>
 
-        
+       <div class="cards">
 
-        <div class="card-info">
-          <div class="p-card">
-            <p>Gôndola Principal</p>
-          </div>
-          <div class="s-card">
-            <span class="temp">Temperatura: 25&deg;</span>
-            <span class="temp">Variação de temperatura: 8&deg; (alta)</span>
-          </div>
-          <div class="alert-card">
-            <svg>
-              <circle cx="30" cy="30" r="20" />
-            </svg>
-          </div>
-          <button class="btnOpenModal" onclick="openModal()">Abrir gráfico</button>
-        </div>
-        
+<div class="card">
+    <p class="card-title">Gôndola</p>
+
+    <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
+    <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
+    <span class="card-span">Variação de temperatura Sem.: 25&deg;</span>
 
 
-        <div class="card-info">
-          <div class="p-card">
-            <p>Gôndola Isolada</p>
-          </div>
-          <div class="s-card">
-            <span class="temp">Temperatura: 25&deg;</span>
-            <span class="temp">Variação de temperatura: 8&deg; (alta)</span>
-            <button class="btnOpenModal" onclick="openModal()">Abrir gráfico</button>
-          </div>
 
-          <div class="alert-card">
-            <svg>
-              <circle cx="30" cy="30" r="20" />
-            </svg>
-          </div>
-        </div>
+    <button class="btn-card" >Ver Gráficos</button>
 
-        <div class="card-info">
-          <div class="p-card">
-            <p>Estoque</p>
-          </div>
-          <div class="s-card">
-            <span class="temp">Temperatura: 25&deg;</span>
-            <span class="temp">Variação de temperatura: 8&deg; (alta)</span>
-            <button class="btnOpenModal" onclick="openModal()">Abrir gráfico</button>
-          </div>
+    <svg height="80" width="60">
+      <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
+    </svg>
 
-          <div class="alert-card">
-            <svg>
-              <circle cx="30" cy="30" r="20" />
-            </svg>
-          </div>
-        </div>
+</div>
 
-        <div class="card-info">
-          <div class="p-card">
-            <p>Estoque</p>
-          </div>
-          <div class="s-card">
-            <span class="temp">Temperatura: 21&deg;</span>
-            <span class="temp">Variação de temperatura: 8&deg; (alta)</span>
-            <button class="btnOpenModal" onclick="openModal()">Abrir gráfico</button>
-          </div>
+<div class="card">
+  <p class="card-title">Gôndola</p>
 
-          <div class="alert-card">
-            <svg>
-              <circle cx="30" cy="30" r="20" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
+  <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
+  <span class="card-span">Variação de temperatura Sem.: 25&deg;</span>
 
 
-  <!-- grafico -->
-  <!-- <div class="grafico-1">
+
+  <button class="btn-card" >Ver Gráficos</button>
+
+  <svg height="80" width="60">
+    <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
+  </svg>
+
+</div>
+
+<div class="card">
+  <p class="card-title">Gôndola</p>
+
+  <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
+  <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
+  <span class="card-span">Variação de temperatura Sem.: 25&deg;</span>
+
+
+
+  <button class="btn-card" >Ver Gráficos</button>
+
+  <svg height="80" width="60">
+    <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
+  </svg>
+
+</div>
+
+<div class="card">
+  <p class="card-title">Gôndola</p>
+
+  <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
+  <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
+  <span class="card-span">Variação de temperatura Sem.: 25&deg;</span>
+
+
+
+  <button class="btn-card" >Ver Gráficos</button>
+
+  <svg height="80" width="60">
+    <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
+  </svg>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+       </div>
+
+    <!-- grafico -->
+    <!-- <div class="grafico-1">
     <canvas id="myChart"></canvas>
   </div> -->
-  <div class="grafico-2">
-    <canvas id="myChart2"></canvas>
-  </div>
-  <div class="grafico-3">
-    <canvas id="myChart3"></canvas>
-  </div>
-  <div class="grafico-3">
-    <canvas id="myChart4"></canvas>
-  </div>
-
-  </div>
-  </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
 
 <script>
-  const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-  ];
+  const labels = ["January", "February", "March", "April", "May", "June"];
 
   const data = {
     labels: labels,
-    datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
-    }]
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        data: [0, 10, 5, 2, 20, 30, 45],
+      },
+    ],
   };
 
   const config = {
-    type: 'line',
+    type: "line",
     data: data,
-    options: {}
+    options: {},
   };
 </script>
 
 <script>
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
+  const myChart = new Chart(document.getElementById("myChart"), config);
 </script>
 
 <script src="../js/scriptmodais.js"></script>
