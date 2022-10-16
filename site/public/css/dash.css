@@ -252,7 +252,64 @@ body {
     
 }
 
+.modal-container3 {
+    width: 90vw;
+    height: 90vh;
+    top: 30px;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.modal-container4 {
+    width: 90vw;
+    height: 90vh;
+    top: 30px;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
 .modal {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    z-index: 999;
+}
+
+.modal2 {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    z-index: 999;
+}
+
+.modal3 {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    z-index: 999;
+}
+
+.modal4 {
     display: flex;
     flex-direction: row;
     padding: 30px;
@@ -299,6 +356,25 @@ body {
 }
 
 .grafico-2 {
+    width: 35vw;
+    height: 25vh;
+}
+
+.graficos2 {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.grafico-3 {
+    width: 35vw;
+    height: 25vh;
+}
+
+.grafico-4 {
     width: 35vw;
     height: 25vh;
 }

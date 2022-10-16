@@ -53,7 +53,41 @@
 
 
     <div class="modal-container2">
-      <div class="modal">
+      <div class="modal2">
+
+        <div class="kpi">
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+        </div>
+        <div class="graficos2">
+          <div class="grafico-3">
+            <canvas id="myChart3"></canvas>
+          </div>
+          <div class="grafico-4">
+            <canvas id="myChart4"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container3">
+      <div class="modal3">
 
         <div class="kpi">
           <div class="kpi-1">
@@ -80,7 +114,41 @@
             <canvas id="myChart"></canvas>
           </div>
           <div class="grafico-2">
-            <canvas id="myChart2"></canvas>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container4">
+      <div class="modal4">
+
+        <div class="kpi">
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+          <div class="kpi-1">
+            AAAA
+          </div>
+        </div>
+        <div class="graficos">
+          <div class="grafico-1">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="grafico-2">
+            <canvas id="myChart"></canvas>
           </div>
         </div>
       </div>
@@ -130,7 +198,7 @@
 
         <div class="card">
 
-          <p class="card-title">Gôndola</p>
+          <p class="card-title">Gôndola 1</p>
 
           <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
           <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
@@ -147,7 +215,7 @@
 
 
         <div class="card">
-          <p class="card-title">Gôndola</p>
+          <p class="card-title">Gôndola 2</p>
 
           <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
           <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
@@ -160,7 +228,6 @@
           <svg height="80" width="60">
             <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
           </svg>
-
         </div>
 
 
@@ -168,8 +235,9 @@
 
 
 
+
         <div class="card">
-          <p class="card-title">Gôndola</p>
+          <p class="card-title">Gôndola 3</p>
 
           <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
           <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
@@ -177,7 +245,7 @@
 
 
 
-          <button class="btn-card">Ver Gráficos</button>
+          <button class="btn-card" onclick="openModal3()">Ver Gráficos</button>
 
           <svg height="80" width="60">
             <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
@@ -204,7 +272,7 @@
             </div>
           </div>
 
-          <p class="card-title">Gôndola</p>
+          <p class="card-title">Gôndola 4</p>
 
           <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
           <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
@@ -212,7 +280,7 @@
 
 
 
-          <button class="btn-card" onclick="openModal()">Ver Gráficos</button>
+          <button class="btn-card" onclick="openModal3()">Ver Gráficos</button>
 
           <svg height="80" width="60">
             <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
@@ -238,18 +306,74 @@
 </body>
 
 </html>
-
+   
 <script>
-  const labels = ["January", "February", "March", "April", "May", "June"];
+    
+    /*paramentro Umidade*/
+  const labels = [
+    "1:31:00 PM", "1:32:00 PM", "1:33:00 PM", "1:34:00 PM", "1:39:00 PM", 
+    "12:00:00 PM","12:01:00 PM","12:02:00 PM","12:03:00 PM","12:04:00 PM",
+    "12:05:00 PM","12:06:00 PM","12:07:00 PM","12:08:00 PM","12:09:00 PM",
+    "12:10:00 PM","12:10:00 PM","12:11:00 PM","12:12:00 PM","12:13:00 PM",
+    "12:14:00 PM","1:07:00 PM","1:08:00 PM","1:09:00 PM","1:10:00 PM",
+    "1:11:00 PM","1:12:00 PM","1:13:00 PM","1:14:00 PM","1:15:00 PM",
+    "1:16:00 PM","1:17:00 PM","1:18:00 PM","1:19:00 PM","1:20:00 PM",
+    "1:21:00 PM","1:22:00 PM","1:23:00 PM","1:24:00 PM","1:25:00 PM",
+    "1:26:00 PM","1:27:00 PM","1:28:00 PM","1:29:00 PM","1:30:00 PM",
+    "1:35:00 PM","1:36:00 PM","1:37:00 PM","1:38:00 PM","12:15:00 PM",
+    "12:16:00 PM","12:17:00 PM","12:18:00 PM","12:59:00 PM","1:00:00 PM",
+    "1:01:00 PM","1:02:00 PM","1:03:00 PM","1:04:00 PM","1:05:00 PM",
+    "1:06:00 PM","12:51:00 PM","12:52:00 PM","12:53:00 PM","12:54:00 PM",
+    "12:55:00 PM","12:56:00 PM","12:57:00 PM","12:58:00 PM","12:47:00 PM",
+    "12:48:00 PM","12:49:00 PM","12:50:00 PM","12:43:00 PM","12:44:00 PM",
+    "12:45:00 PM","12:46:00 PM","12:39:00 PM","12:40:00 PM","12:41:00 PM",
+    "12:42:00 PM","12:35:00 PM","12:36:00 PM","12:37:00 PM","12:38:00 PM",
+    "12:23:00 PM","12:24:00 PM","12:25:00 PM","12:26:00 PM","12:19:00 PM",
+    "12:20:00 PM","12:21:00 PM","12:22:00 PM","12:27:00 PM","12:28:00 PM",
+    "12:29:00 PM","12:30:00 PM","12:31:00 PM","12:32:00 PM","12:33:00 PM"];
 
+    /*paramentro temperatura*/
+  const labels2 = [
+    "12:00:00 PM", "12:01:00 PM", "12:02:00 PM", "12:03:00 PM", "12:04:00 PM", 
+    "12:05:00 PM","12:06:00 PM","12:07:00 PM","12:08:00 PM","12:09:00 PM",
+    "12:10:00 PM","12:11:00 PM","12:12:00 PM","12:13:00 PM","12:14:00 PM",
+    "12:15:00 PM","12:16:00 PM","12:17:00 PM","12:18:00 PM","12:19:00 PM",
+    "12:20:00 PM","12:21:00 PM","12:22:00 PM","12:23:00 PM","12:24:00 PM",
+    "12:25:00 PM","12:26:00 PM","12:27:00 PM","12:28:00 PM","12:29:00 PM",
+    "12:30:00 PM","12:31:00 PM","12:32:00 PM","12:33:00 PM","12:34:00 PM",
+    "12:35:00 PM","12:36:00 PM","12:37:00 PM","12:38:00 PM","12:39:00 PM",
+    "12:40:00 PM","12:41:00 PM","12:42:00 PM","12:43:00 PM","12:44:00 PM",
+    "12:45:00 PM","12:46:00 PM","12:47:00 PM","12:48:00 PM","12:49:00 PM",
+    "12:50:00 PM","12:51:00 PM","12:52:00 PM","12:53:00 PM","12:54:00 PM",
+    "12:55:00 PM","12:56:00 PM","12:57:00 PM","12:58:00 PM","12:59:00 PM",
+    "1:00:00 PM","1:01:00 PM","1:02:00 PM","1:03:00 PM","1:04:00 PM","1:05:00 PM",
+    "1:06:00 PM","1:08:00 PM","1:09:00 PM","1:10:00 PM","1:11:00 PM","1:12:00 PM",
+    "1:13:00 PM","1:14:00 PM","1:15:00 PM","1:16:00 PM","1:17:00 PM","1:18:00 PM",
+    "1:19:00 PM","1:20:00 PM","1:21:00 PM","1:22:00 PM","1:23:00 PM","1:24:00 PM",
+    "1:25:00 PM","1:26:00 PM","1:27:00 PM","1:28:00 PM","1:29:00 PM","1:30:00 PM",
+    "1:31:00 PM","1:32:00 PM","1:33:00 PM","1:34:00 PM","1:35:00 PM","1:36:00 PM",
+    "1:37:00 PM","1:38:00 PM","1:39:00 PM","1:40:00 PM"];
+
+    /* Quadro 1 Gondola */ 
   const data = {
-    labels: labels,
+    labels: labels2,
     datasets: [
       {
-        label: "My First dataset",
+        label: "Temperatura",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: [
+        18.4, 19.3, 19.5, 19.9, 20.1, 20.5,16.8, 17.2, 17.6, 17.4, 17.8, 
+        18.0, 18.4, 18.2, 17.8, 18.0, 18.4, 18.2, 17.8, 18.2, 18.4, 18.7,
+        18.6, 18.6, 18.6, 18.7, 18.9, 18.9, 19.1, 19.1, 19.1, 19.3, 19.3, 
+        19.7, 20.3, 21.2, 22.5, 21.2, 20.8, 20.5, 20.3, 20.1, 19.5, 19.1, 
+        19.3, 18.9, 18.7, 18.6, 18.6, 18.4, 18.0, 18.4, 18.4, 18.4, 18.6, 
+        18.6, 18.6, 18.7, 18.7, 18.7, 19.1, 19.1, 19.3, 19.5, 19.5, 19.7, 
+        19.7, 19.9, 20.1, 20.1, 20.1, 20.5, 20.6, 20.6, 20.6, 20.6, 21.0, 
+        21.0, 21.2, 21.2, 21.4, 21.4, 21.6, 21.8, 22.2, 22.4, 22.4, 22.7, 
+        22.9, 22.9, 22.9, 23.1, 23.5, 23.5, 23.3, 23.1, 23.1, 23.3, 23.3, 
+        23.5
+      ],
       },
     ],
   };
@@ -258,14 +382,71 @@
     labels: labels,
     datasets: [
       {
-        label: "My First dataset",
+        label: "Umidade",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
-        data: [0, 10, 5, 2, 19, 42, 45],
+        data: [
+          66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 
+          66.8, 66.8, 66.8, 66.8, 68.6, 68.6, 68.6, 68.6, 83, 83, 83, 81.2, 
+          81.2, 81.2, 81.2, 81.2, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 
+          83, 83, 79.4, 79.4, 79.4, 79.4, 75.8, 75.8, 75.8, 75.8, 72.2, 
+          72.2, 72.2, 72.2, 70.4, 70.4, 70.4, 70.4, 70.4, 70.4, 70.4, 
+          70.4, 68.6, 68.6, 68.6, 68.6, 68.8, 68.8, 68.8, 68.8, 66.8, 
+          66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 
+          66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 
+          66.8, 66.8, 66.8, 65, 65, 65, 65, 66.8, 66.8, 66.8, 66.8   
+        ],
       },
     ],
   };
 
+ /* Quadro 2 Gondola */ 
+ const data3 = {
+    labels: labels2,
+    datasets: [
+      {
+        label: "Temperatura",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        data: [
+        20.2, 21.2, 21.5, 21.9, 22.1, 22.5, 18.5, 18.9, 19.4, 19.2, 19.6, 
+        19.8, 20.2, 20.0, 19.6, 20.0, 20.2, 20.6, 20.4, 20,4, 20.4, 20.4, 
+        20.6, 20.8, 20.8, 21.0, 21.0, 21.0, 21.2, 21.2, 21.7, 22.3, 23.3, 
+        24.8, 23.3, 22.9, 22.5, 22.3, 22.1, 21.5, 21.0, 21.2, 20.8, 20.6, 
+        20.4, 20.4, 20.2, 19.8, 20.2, 20.2, 20.2, 20.4, 20.4, 20.4, 20.6, 
+        20.6, 20.6, 21.0, 21.0, 21.2, 21.5, 21.5, 21.5, 21.7, 21.7, 21.9, 
+        22.1, 22.1, 22.1, 22.5, 22.7, 22.7, 22.7, 22.7, 23.1, 23.1, 23.3, 
+        23.5, 23.5, 23.7, 24.0, 24.4, 24.6, 24.6, 25.0, 25.0, 25.2, 25.2, 
+        25.2, 25.4, 25.8, 25.8, 25.6, 25.4, 25.4, 25.6, 25.6, 25.8  
+      ],
+      },
+    ],
+  };
+
+  const data4 = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Umidade",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        data: [
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 75.46, 75.46, 75.46, 75.46, 91.3, 
+          91.3, 91.3, 89.32, 89.32, 89.32, 89.32, 89.32, 91.3, 91.3, 91.3, 91.3, 
+          91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 87.34, 87.34, 87.34, 
+          87.34, 83.38, 83.38, 83.38, 83.38, 79.42, 79.42, 79.42, 79.42, 77.44, 
+          77.44, 77.44, 77.44, 77.44, 77.44, 77.44, 77.44, 75.46, 75.46, 75.46, 
+          75.46, 75.46, 75.46, 75.46, 75.46, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 71.5, 71.5, 
+          71.5, 71.5, 73.48, 73.48, 73.48, 78.48       
+        ],
+      },
+    ],
+  };
+
+  /* Quadro 1 Gondola */
   const config = {
     type: "line",
     data: data,
@@ -273,8 +454,21 @@
   };
 
   const config2 = {
-    type: "line",
+    type: "bar",
     data: data2,
+    options: {},
+  };
+
+  /* Quadro 2 Gondola */
+  const config3 = {
+    type: "line",
+    data: data3,
+    options: {},
+  };
+
+  const config4 = {
+    type: "bar",
+    data: data4,
     options: {},
   };
 </script>
@@ -283,6 +477,10 @@
   const myChart = new Chart(document.getElementById("myChart"), config);
 
   const myChart2 = new Chart(document.getElementById("myChart2"), config2);
+
+  const myChart3 = new Chart(document.getElementById("myChart3"), config3);
+
+  const myChart4 = new Chart(document.getElementById("myChart4"), config4);
 </script>
 
 <script src="../js/scriptmodais.js"></script>
