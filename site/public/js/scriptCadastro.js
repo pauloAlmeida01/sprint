@@ -29,6 +29,7 @@ const senha = document.querySelector('.senha');
         var senha = ipt_senha.value
         var confirmacao = ipt_confirmSenha.value
         var email = ipt_email.value
+        var campos_validos = 'no'
         if (telefone == '') {
             alert('Você precisa digitar o seu telefone!')
         }
@@ -53,6 +54,12 @@ const senha = document.querySelector('.senha');
         if (senha != confirmacao) {
             alert('A senha e a confirmação não coincidem!')
         }
-        if (email.includes("@") && email.includes(".")) {}
+        if (email.includes("@") && email.includes(".")) {
+            campos_validos = 'yes';
+        }
         else{alert('Digite um email válido!')}
+        
+        if (campos_validos == 'yes') {
+            window.location.replace("cadastro-2.html")
+        }
     }
