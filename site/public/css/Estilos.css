@@ -60,13 +60,11 @@ body {
 
 .navbar {
     display: flex;
-    width: 600px;
+    width: 750px;
     justify-content: space-around;
     color: black;
     list-style: none;
     align-items: center;
-
-
 }
 
 .navbar a {
@@ -82,12 +80,27 @@ body {
     border-radius: 5px;
     margin-left: 50px;
 }
+
+.navbar .cadastro {
+    border: 1px solid #0f8b2e;
+    color: black;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin-left: 0px;
+}
+
 .navbar .link:hover {
     color: green;
     transition: 0.5s;
 }
 
 .navbar .login:hover{
+    background-color: #0f8b2e;
+    color: white;
+    transition: 0.5s;
+}
+
+.navbar .cadastro:hover{
     background-color: #0f8b2e;
     color: white;
     transition: 0.5s;
