@@ -14,8 +14,8 @@ function calc() {
     } else if (isNaN(qtdAlface)) {
         alert(`Insira um valor válido!`)
     } else {
-        p_msg.innerHTML = "O lucro com prejuízo de 19% é: R$ " + totalPreju.toFixed(2) + "<br>";
-        p_msg.innerHTML += "O lucro com a nossa solução é: R$ " + total.toFixed(2) + "<br>";
+        p_msg.innerHTML = "O lucro sem a nossa solução(-19%) é de: R$ " + totalPreju.toFixed(2) + "<br>";
+        p_msg.innerHTML += "Com a nossa solução você passa a lucrar: R$ " + total.toFixed(2) + "<br>";
         p_msg.innerHTML += `Após três(3) encomendas com a nossa solução seu lucro passa a ser de R$${lucro3.toFixed(2)} <br>`
         p_msg.innerHTML += `Após seis(6) encomendas com a nossa solução seu lucro passa a ser de R$${lucro6.toFixed(2)} <br>`
         p_msg.innerHTML += `Após dez(10) encomendas com a nossa solução seu lucro passa a ser de R$${lucro10.toFixed(2)}`
