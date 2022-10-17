@@ -17,7 +17,7 @@
 
     <div class="modal-container">
       <div class="modal">
-
+        <button onclick="closeModal()" class="fechar">X</button>
         <div class="kpi">
           <div class="kpi-1">
             <div class="kpi-title">
@@ -84,7 +84,7 @@
 
     <div class="modal-container2">
       <div class="modal2">
-
+        <button onclick="closeModal2()" class="fechar">X</button>
         <div class="kpi">
           <div class="kpi-1">
            <div class="kpi-title">
@@ -148,25 +148,43 @@
 
     <div class="modal-container3">
       <div class="modal3">
-
+        <button onclick="closeModal3()" class="fechar">X</button>
         <div class="kpi">
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Maior Temperatura nos últimos 7 dias
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Maior Umidade nos últimos 7 dias
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Menor Temperatura nos últimos 7 dias
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Menor Umidade nos últimos 7 dias
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Variação Temperatura ultima 1 Hora
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Variação Umidade ultima 1 Hora
+            </div>
+            <div class="kpi-data"></div>
           </div>
         </div>
         <div class="graficos">
@@ -182,25 +200,41 @@
 
     <div class="modal-container4">
       <div class="modal4">
-
+        <button onclick="closeModal4()" class="fechar">X</button>
         <div class="kpi">
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">Maior Temperatura nos últimos 7 dias</div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Maior Umidade nos últimos 7 dias
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Menor Temperatura nos últimos 7 dias
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Menor Umidade nos últimos 7 dias
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Variação Temperatura ultima 1 Hora
+            </div>
+            <div class="kpi-data"></div>
           </div>
           <div class="kpi-1">
-            AAAA
+            <div class="kpi-title">
+              Variação Umidade ultima 1 Hora
+            </div>
+            <div class="kpi-data"></div>
           </div>
         </div>
         <div class="graficos">
@@ -443,8 +477,8 @@
     datasets: [
       {
         label: "Umidade",
-        backgroundColor: "rgb(255, 99, 132)",
-        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "blue",
+        borderColor: "blue",
         data: [
           66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 66.8, 
           66.8, 66.8, 66.8, 66.8, 68.6, 68.6, 68.6, 68.6, 83, 83, 83, 81.2, 

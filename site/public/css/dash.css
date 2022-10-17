@@ -341,36 +341,42 @@ body {
 }
 .kpi-title {
     display: flex;
-    width: 92%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    width: 100%;
+    height: 55%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     justify-content: center;
     align-items:center;
     text-align: center;
     font-size: 15px;
     font-weight: 500;
     background-color: green;
-    padding: 8px 10px;
 }
 .kpi-title2 {
     display: flex;
-    width: 92%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    width: 100%;
+    height: 55%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     justify-content: center;
     align-items:center;
     text-align: center;
     font-size: 15px;
     font-weight: 500;
     background-color: green;
-    padding: 8px 10px;
 }
 .kpi-data {
     display: flex;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
     text-align: center;
-    height: 45%;
+    height: 55%;
+    margin-top: 0;
+}
+.container .fechar{
+    font-size: 30px;
+    width: 5%;
+    height: 5%;
 }
 
 .graficos {
