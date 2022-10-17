@@ -238,7 +238,6 @@ body {
     margin-left: 100px;
     
 }
-
 .modal-container2 {
     width: 90vw;
     height: 90vh;
@@ -339,6 +338,39 @@ body {
     border-radius: 5px;
     box-shadow: 0px 0px 8px 0px rgb(160, 156, 156);
     border: 1px solid gray;
+}
+.kpi-title {
+    display: flex;
+    width: 92%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: green;
+    padding: 8px 10px;
+}
+.kpi-title2 {
+    display: flex;
+    width: 92%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: green;
+    padding: 8px 10px;
+}
+.kpi-data {
+    display: flex;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    height: 45%;
 }
 
 .graficos {
