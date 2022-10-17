@@ -188,11 +188,11 @@
           </div>
         </div>
         <div class="graficos">
-          <div class="grafico-1">
-            <canvas id="myChart"></canvas>
+          <div class="grafico-5">
+            <canvas id="myChart5"></canvas>
           </div>
-          <div class="grafico-2">
-            <canvas id="myChart"></canvas>
+          <div class="grafico-6">
+            <canvas id="myChart6"></canvas>
           </div>
         </div>
       </div>
@@ -238,11 +238,11 @@
           </div>
         </div>
         <div class="graficos">
-          <div class="grafico-1">
-            <canvas id="myChart"></canvas>
+          <div class="grafico-7">
+            <canvas id="myChart7"></canvas>
           </div>
-          <div class="grafico-2">
-            <canvas id="myChart"></canvas>
+          <div class="grafico-8">
+            <canvas id="myChart8"></canvas>
           </div>
         </div>
       </div>
@@ -539,7 +539,97 @@
       },
     ],
   };
+  // Quadro 3 Gondola
+  const data5 = {
+    labels: labels2,
+    datasets: [
+      {
+        label: "Temperatura",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        data: [
+        20.2, 21.2, 21.5, 21.9, 22.1, 22.5, 18.5, 18.9, 19.4, 19.2, 19.6, 
+        19.8, 20.2, 20.0, 19.6, 20.0, 20.2, 20.6, 20.4, 20,4, 20.4, 20.4, 
+        20.6, 20.8, 20.8, 21.0, 21.0, 21.0, 21.2, 21.2, 21.7, 22.3, 23.3, 
+        24.8, 23.3, 22.9, 22.5, 22.3, 22.1, 21.5, 21.0, 21.2, 20.8, 20.6, 
+        20.4, 20.4, 20.2, 19.8, 20.2, 20.2, 20.2, 20.4, 20.4, 20.4, 20.6, 
+        20.6, 20.6, 21.0, 21.0, 21.2, 21.5, 21.5, 21.5, 21.7, 21.7, 21.9, 
+        22.1, 22.1, 22.1, 22.5, 22.7, 22.7, 22.7, 22.7, 23.1, 23.1, 23.3, 
+        23.5, 23.5, 23.7, 24.0, 24.4, 24.6, 24.6, 25.0, 25.0, 25.2, 25.2, 
+        25.2, 25.4, 25.8, 25.8, 25.6, 25.4, 25.4, 25.6, 25.6, 25.8  
+      ],
+      },
+    ],
+  };
+  
+  const data6 = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Umidade",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        data: [
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 75.46, 75.46, 75.46, 75.46, 91.3, 
+          91.3, 91.3, 89.32, 89.32, 89.32, 89.32, 89.32, 91.3, 91.3, 91.3, 91.3, 
+          91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 87.34, 87.34, 87.34, 
+          87.34, 83.38, 83.38, 83.38, 83.38, 79.42, 79.42, 79.42, 79.42, 77.44, 
+          77.44, 77.44, 77.44, 77.44, 77.44, 77.44, 77.44, 75.46, 75.46, 75.46, 
+          75.46, 75.46, 75.46, 75.46, 75.46, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 71.5, 71.5, 
+          71.5, 71.5, 73.48, 73.48, 73.48, 78.48       
+        ],
+      },
+    ],
+  };
 
+  // Quadro 4 Gondola
+  const data7 = {
+    labels: labels2,
+    datasets: [
+      {
+        label: "Temperatura",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        data: [
+        20.2, 21.2, 21.5, 21.9, 22.1, 22.5, 18.5, 18.9, 19.4, 19.2, 19.6, 
+        19.8, 20.2, 20.0, 19.6, 20.0, 20.2, 20.6, 20.4, 20,4, 20.4, 20.4, 
+        20.6, 20.8, 20.8, 21.0, 21.0, 21.0, 21.2, 21.2, 21.7, 22.3, 23.3, 
+        24.8, 23.3, 22.9, 22.5, 22.3, 22.1, 21.5, 21.0, 21.2, 20.8, 20.6, 
+        20.4, 20.4, 20.2, 19.8, 20.2, 20.2, 20.2, 20.4, 20.4, 20.4, 20.6, 
+        20.6, 20.6, 21.0, 21.0, 21.2, 21.5, 21.5, 21.5, 21.7, 21.7, 21.9, 
+        22.1, 22.1, 22.1, 22.5, 22.7, 22.7, 22.7, 22.7, 23.1, 23.1, 23.3, 
+        23.5, 23.5, 23.7, 24.0, 24.4, 24.6, 24.6, 25.0, 25.0, 25.2, 25.2, 
+        25.2, 25.4, 25.8, 25.8, 25.6, 25.4, 25.4, 25.6, 25.6, 25.8  
+      ],
+      },
+    ],
+  };
+  
+  const data8 = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Umidade",
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
+        data: [
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 75.46, 75.46, 75.46, 75.46, 91.3, 
+          91.3, 91.3, 89.32, 89.32, 89.32, 89.32, 89.32, 91.3, 91.3, 91.3, 91.3, 
+          91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 91.3, 87.34, 87.34, 87.34, 
+          87.34, 83.38, 83.38, 83.38, 83.38, 79.42, 79.42, 79.42, 79.42, 77.44, 
+          77.44, 77.44, 77.44, 77.44, 77.44, 77.44, 77.44, 75.46, 75.46, 75.46, 
+          75.46, 75.46, 75.46, 75.46, 75.46, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 
+          73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 73.48, 71.5, 71.5, 
+          71.5, 71.5, 73.48, 73.48, 73.48, 78.48       
+        ],
+      },
+    ],
+  };
   /* Quadro 1 Gondola */
   const config = {
     type: "line",
@@ -565,6 +655,30 @@
     data: data4,
     options: {},
   };
+//  Quadro 3 Gondola
+  const config5 = {
+    type: "line",
+    data: data5,
+    options: {},
+  }
+
+  const config6 = {
+    type: "bar",
+    data: data6,
+    options: {},
+  }
+  // Quadro 4 Gondola
+  const config7 = {
+    type: "line",
+    data: data7,
+    options: {},
+  }
+
+  const config8 = {
+    type: "bar",
+    data: data8,
+    options: {},
+  }
 </script>
 
 <script>
@@ -575,6 +689,14 @@
   const myChart3 = new Chart(document.getElementById("myChart3"), config3);
 
   const myChart4 = new Chart(document.getElementById("myChart4"), config4);
+
+  const myChart5 = new Chart(document.getElementById("myChart5"), config5);
+
+  const myChart6 = new Chart(document.getElementById("myChart6"), config6);
+
+  const myChart7 = new Chart(document.getElementById("myChart7"), config7);
+
+  const myChart8 = new Chart(document.getElementById("myChart8"), config8);
 </script>
 
 <script src="../js/scriptmodais.js"></script>
