@@ -350,7 +350,7 @@ body {
     text-align: center;
     font-size: 15px;
     font-weight: 500;
-    background-color: green;
+    background-color: #01c901;
     color: white;
 }
 .kpi-title2 {
@@ -364,7 +364,7 @@ body {
     text-align: center;
     font-size: 15px;
     font-weight: 500;
-    background-color: green;
+    background-color: #01c901;
     color: white;
 }
 .kpi-data {
@@ -435,6 +435,16 @@ body {
 }
 
 .grafico-6 {
+    width: 35vw;
+    height: 25vh;
+}
+
+.grafico-7 {
+    width: 35vw;
+    height: 25vh;
+}
+
+.grafico-8 {
     width: 35vw;
     height: 25vh;
 }
