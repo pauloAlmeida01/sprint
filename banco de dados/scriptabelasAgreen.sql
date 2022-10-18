@@ -1,82 +1,103 @@
 create database agreen;
 use agreen;
 
+create table empresa (
+idEmpresa INT PRIMARY KEY auto_increment,
+razaoSocial varchar(80),
+nome varchar (45),
+CNPJ char (14),
+telFixo char(11)
+);
+
 create table usuario (
 idUsuario INT primary key auto_increment,
+nome varchar (45),
 email varchar (45),
-CNPJ char (14),
 senha varchar (20),
 fkempresa int,
 constraint fkempresa foreign key (fkempresa) 
 references empresa (idEmpresa)
 ); 
 
-create table empresa (
-idEmpresa INT PRIMARY KEY,
-nome Varchar(45),
-tipo varchar(45),
-email varchar(45),
-telFixo char(11)
-);
-
 create table enderecoEmpresa (
-idEndereco int primary key auto_increment,
+idEndereco int,
+fkempresa int,
+constraint foreign key (fkempresa) 
+references empresa (idEmpresa),
 cep char (8),
 rua varchar (45),
 bairro varchar (45),
 num int,
-fkempresa int,constraint foreign key (fkempresa) 
-references Endereco (idEndereco)
+complemento varchar (45),
+primary key (idEndereco, fkempresa)
 );
  
- 
 create table sensor (
-idSensor int primary key auto_increment,
-atividade varchar (45),
-nome varchar(45),
+idSensor int,
 fkSensorEmpresa int,
 constraint fkSensorEmpresa foreign key (fkSensorEmpresa)
-references empresa (idEmpresa)
+references empresa (idEmpresa),
+atividade varchar (45),
+nome varchar(45),
+primary key (idSensor, fkSensorEmpresa)
 );
 
 create table leitura (
 idLeitura int primary key auto_increment,
-temperatura DECIMAL (3.1),
-umidade DECIMAL (3.1),
+temperatura DECIMAL (3,1),
+umidade DECIMAL (3,1),
 data_horario datetime,
 fksensor int,
 constraint fksensor foreign key (fksensor)
-references sensor (idsensor)
+references sensor (idSensor),
+fkSensorEmpresa int,
+constraint fkSensordaEmpresa foreign key (fkSensorEmpresa)
+references sensor (fkSensorEmpresa)
 );
 
 INSERT INTO empresa VALUES
-(1,'CarreAssai','Matriz','carreassai.oficial@email.com','1122446688'),
-(2,'ExtroMagazino','Matriz','extromagazino.oficial@email.com','1133557799');
+(null, 'Barcelona Comércio Varejista e Atacadista S/A', 'Assai', 55343752000147, 1122446688),
+(null, 'Carrefour Comercio e Industria Ltda', 'Carrefour', 31573781000137, 11212343245),
+(null, 'Cnova Comercio Eletrônico S/A', 'Extra', 78213489000177, 11679216032);
 
 INSERT INTO usuario VALUES 
-(1,'lucasmilagres@sptech.school','12345876000161','Empresa123@',1),
-(2,'alanaquino@sptech.school','12345678000161','CarreAssai123',1),
-(3,'paulo.rodrigues@sptech.school','12343421000161','ExtroMagazino123@',2);
+(null, 'Lucas', 'lucas.milagres@sptech.school','Empresa123@', 1),
+(null, 'Alan', 'alan.silva@sptech.school','alan3838', 2),
+(null, 'Leonardo', 'leonardo.borges@sptech.school','leleo34532', 2),
+(null, 'Luan', 'luan.souza@sptech.school','souza321', 3),
+(null, 'Gabriel', 'gabriel.ssilva@sptech.school','fernando90', 3),
+(null, 'Paulo', 'paulo.santos@sptech.school','paulo231', 1);
 
 INSERT INTO enderecoempresa VALUES 
-(1,'01414002','Rua Haddok Lobo','Cerqueira César',594,1),
-(2,'03909150','Rua Estado do Amazonas','São Mateus',503,2);
+(1, 2, 89076523, 'Rua Cerqueira César', 'Vila Matilde', 595, null),
+(2, 1, 12383741, 'Rua Pamplona', 'São Mateus', 123, 'C'),
+(3, 3, 45682312, 'Av. dos Milagres', 'Santana', 8978, null);
 
 INSERT INTO sensor VALUES 
-(1,'','Sensor Gondula 1',1),
-(2,'','Sensor Gondula 2',1),
-(3,'','Sensor Frezzer 1',1),
-(4,'','Sensor Frezzer 2',1),
-(5,'','Sensor Gondula 1',2),
-(6,'','Sensor Gondula 2',2),
-(7,'','Sensor Frezzer 1',2),
-(8,'','Sensor Frezzer 2',2);
+(1, 1, 'ativo', 'Sensor Gondula 1'),
+(2, 1, 'ativo', 'Sensor Gondula 2'),
+(3, 1, 'ativo', 'Sensor Freezer 1'),
+(4, 1, 'ativo', 'Sensor Freezer 2'),
+(1, 2, 'ativo', 'Sensor Gondula 1'),
+(2, 2, 'ativo', 'Sensor Gondula 2'),
+(3, 2, 'ativo', 'Sensor Freezer 1'),
+(4, 2, 'ativo', 'Sensor Freezer 2'),
+(1, 3, 'ativo', 'Sensor Gondula 1'),
+(2, 3, 'ativo', 'Sensor Gondula 2'),
+(3, 3, 'ativo', 'Sensor Freezer 1'),
+(4, 3, 'ativo', 'Sensor Freezer 2');
 
 INSERT INTO leitura VALUES
-(1,'22.5','75','1999-01-01 11:40:00',1),
-(2,'23.5','80','1999-01-01 11:40:00',2),
-(3,'1.5','85','1999-01-0 11:40:00',3),
-(4,'1.5','81','1999-01-0 11:40:00',4);
+(1,'22.5','75','1999-01-01 11:40:00',1, 2),
+(2,'23.5','80','1999-01-01 11:41:00',1, 1),
+(3,'1.5','85','1999-01-0 11:42:00', 1, 3),
+(4,'4.9','81','1999-01-0 11:41:00', 2, 1),
+(5,'13.7','81','1999-01-0 11:43:00', 2, 2),
+(6,'20.5','81','1999-01-0 11:39:00', 2, 3),
+(7,'10.1','81','1999-01-0 11:42:00', 3, 1),
+(8,'30.2','81','1999-01-0 11:43:00', 3, 2),
+(9,'22.4','81','1999-01-0 11:44:00', 3, 3);
+
 
 
 
