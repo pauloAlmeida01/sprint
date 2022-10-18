@@ -98,7 +98,73 @@ INSERT INTO leitura VALUES
 (8,'30.2','81','1999-01-0 11:43:00', 3, 2),
 (9,'22.4','81','1999-01-0 11:44:00', 3, 3);
 
+	-- Dados Sensores
+    
+	SELECT e.nome as NomeEmpresa,
+			s.nome as LocalSensor,
+             l.temperatura as Temperatura,
+             l.umidade as Umidade,
+             l.data_horario as Dia_hora
+             FROM empresa as e
+             JOIN sensor as s
+             ON idEmpresa = fkSensorEmpresa 
+             JOIN leitura as l
+             ON idSensor = fkSensor;
+             
+             
+	 SELECT e.nome as NomeEmpresa,
+			s.nome as LocalSensor,
+             l.temperatura as Temperatura,
+             l.umidade as Umidade,
+             l.data_horario as Dia_hora
+             FROM empresa as e
+             JOIN sensor as s
+             ON idEmpresa = fkSensorEmpresa 
+             JOIN leitura as l
+             ON idSensor = fkSensor
+             where idEmpresa = 1;
+             
+	SELECT e.nome as NomeEmpresa,
+			s.nome as LocalSensor,
+             l.temperatura as Temperatura,
+             l.umidade as Umidade,
+             l.data_horario as Dia_hora
+             FROM empresa as e
+             JOIN sensor as s
+             ON idEmpresa = fkSensorEmpresa 
+             JOIN leitura as l
+             ON idSensor = fkSensor
+             where idEmpresa = 2;
+            
+	SELECT e.nome as NomeEmpresa,
+			s.nome as LocalSensor,
+             l.temperatura as Temperatura,
+             l.umidade as Umidade,
+             l.data_horario as Dia_hora
+             FROM empresa as e
+             JOIN sensor as s
+             ON idEmpresa = fkSensorEmpresa 
+             JOIN leitura as l
+             ON idSensor = fkSensor
+             where idEmpresa = 3;
+    
+    -- Endereço
+    
+	SELECT e.nome as NomeEmpresa,
+			c.cep as CEP,
+			c.rua as Rua,
+            c.bairro as Bairro,
+            c.complemento as Complemento
+            FROM empresa as e 
+            JOIN enderecoEmpresa as c
+            ON idempresa = fkempresa;
 
+	-- Usuario + empresa
 
-
-
+	SELECT e.nome as NomeEmpresa,
+			u.nome as NomeUsuario,
+            u.email as Email,
+            u.senha as senha
+            FROM empresa as e
+            JOIN usuario as u
+            ON idempresa = fkempresa;
