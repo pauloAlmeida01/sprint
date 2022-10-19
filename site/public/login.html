@@ -26,10 +26,10 @@
     <div class="form-login">
         <a href="./Index.html" class="spanSeta">&larr;</a>
         <p>E-mail:</p>
-        <input type="text" placeholder="Digite seu e-mail" id="ipt_email">
+        <input type="text" placeholder="Digite seu e-mail" id="inpEmail">
         <p>Senha:</p>
         <div class="form-login-password">
-        <input type="password" placeholder="Digite sua senha" class="senha" id="ipt_senha">
+        <input type="password" placeholder="Digite sua senha" class="senha" id="inpSenha">
 
         <img src="./assets/icon/eye.png" alt="Olho senha" class="btn">
         </div>
@@ -84,6 +84,7 @@
                    sessionStorage.ID_USUARIO = json.id;
 
                    setTimeout(function () {
+                        alert("Login realizado com sucesso!");
                        window.location = "./dashboard/dashboard.html";
                    }, 1000); // apenas para exibir o loading
 

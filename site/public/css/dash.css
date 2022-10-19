@@ -102,7 +102,7 @@ body {
 /*Cards do topo da tela*/
 
 .conteudo .header-info {
-    width: 84vw;
+    width: 82vw;
     height: 24vh;
     display: flex;
     flex-direction: row;
@@ -190,13 +190,13 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 96%;
     padding-left: 4vh;
 }
 
 .cards .card {
     height: 210px;
-    width: 500px;
+    width: 470px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
