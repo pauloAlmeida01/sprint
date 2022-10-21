@@ -131,7 +131,7 @@ body {
 /*Cards do topo da tela*/
 
 .conteudo .header-info {
-    width: 100%;
+    width: 95%;
     height: 30vh;
     display: flex;
     flex-direction: row;
@@ -190,7 +190,7 @@ body {
     text-align: center;
     width: 95%;
     height:4vh; 
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .info .card-analytics-title2{
@@ -237,21 +237,28 @@ body {
 }
 
 .data-card1 span {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 550;
     border-radius: 10px;
     text-align: center;
     height: 5vh;
     width: 85%;
+    padding-right: 15px;
 }
 
 .data-card2 span {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 550;
     border-radius: 10px;
     text-align: center;
     height: 5vh;
     width: 85%;
+    padding-right: 15px;
+}
+
+.info .footer-legenda{
+    display: flex;
+    justify-content: space-around;
 }
 
 .info:hover {
