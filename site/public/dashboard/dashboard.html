@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/dash.css" />
   <link rel="icon" href="../assets/imgs/Agreen_-_White_with_Black.png" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.0.1/chartjs-plugin-annotation.min.js" integrity="sha512-LZEOcU8s74hwWva82MJux7GgFNjfeExXG9yZPQrKz567Od4O2D/6UX3oGoZiRDOdbMtH33NBq7vonH4VOUPA/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="../js/funcoes.js"></script>
 
   <title>Dashboard</title>
@@ -297,8 +298,37 @@
       </div>
   </div>
 
-    <div class="conteudo">
+<div class="legenda">
+  <h1>Tipos de Alertas</h1>
+
+  <div class="alertas">
+    <svg height="80" width="60">
+      <circle cx="30" cy="22" r="16" stroke="red" stroke-width="0" fill="red" />
+    </svg>
+    <p>Crítico</p>
+  </div>
+  <div class="alertas">
+    <svg height="80" width="60">
+      <circle cx="30" cy="22" r="16" stroke="red" stroke-width="0" fill="orange" />
+    </svg>
+    <p>Emergência</p>
+  </div>
+  <div class="alertas">
+    <svg height="80" width="60">
+      <circle cx="30" cy="22" r="16" stroke="red" stroke-width="0" fill="yellow" />
+    </svg>
+    <p>Alerta</p>
+  </div>
+  <div class="alertas">
+    <svg height="80" width="60">
+      <circle cx="30" cy="22" r="16" stroke="red" stroke-width="0" fill="green" />
+    </svg>
+    <p>Ideal</p>
+  </div>
+    </div>
       <div class="header-info">
+      
+     
         <div class="info" id="info1">
           <p class="card-analytics-title">Temperatura</p>
           <div class="data-card1">
@@ -379,9 +409,9 @@
             <span class="card-analytics-title2">Armazenamento</span><span class="card-analytics-title2">Gôndola</span>
           </div>
         </div>
-      </div>
+      
 
-      <div class="header-info">
+
         <div class="info" id="info1">
           <p class="card-analytics-title">Umidade</p>
             <div class="data-card1">
@@ -462,6 +492,7 @@
         </div>
       </div>
 
+
       <div class="cards">
 
         <div class="card">
@@ -477,7 +508,7 @@
           <button class="btn-card" onclick="openModal()">Ver Gráficos</button>
 
           <svg height="80" width="60">
-            <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
+            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" />
           </svg>
         </div>
 
@@ -494,7 +525,7 @@
           <button class="btn-card" onclick="openModal2()">Ver Gráficos</button>
 
           <svg height="80" width="60">
-            <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
+            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" />
           </svg>
         </div>
 
@@ -516,7 +547,7 @@
           <button class="btn-card" onclick="openModal3()">Ver Gráficos</button>
 
           <svg height="80" width="60">
-            <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
+            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" />
           </svg>
 
         </div>
@@ -551,21 +582,18 @@
           <button class="btn-card" onclick="openModal4()">Ver Gráficos</button>
 
           <svg height="80" width="60">
-            <circle cx="36" cy="22" r="16" stroke="black" stroke-width="0" />
+            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" />
           </svg>
 
         </div>
-
-
-
-
-
-
-
-
-
-
       </div>
+      <div class="footer">
+        <div>
+            <h4>Desenvolvido pela Agreen Solution &copy; 2022</h4>
+        </div>
+    </div>
+    </div>
+    
 
       <!-- grafico -->
       <!-- <div class="grafico-1">
@@ -987,11 +1015,78 @@
       },
     ],
   };
+
+
+  const faixas = {
+    scales: {
+        y: {
+          suggestedMin: 0,
+          suggestedMax: 35,
+        },
+        
+      },
+    plugins: {
+    autocolors: false,
+    annotation: {
+      annotations: {
+        line1: {
+          type: 'line',
+          yMin: 22,
+          yMax: 22,
+          borderColor: 'green',
+          borderWidth: 1,
+        },
+        line2: {
+          type: 'line',
+          yMin: 24,
+          yMax: 24,
+          borderColor: 'green',
+          borderWidth: 1,
+        },
+        
+      }
+    }
+  }
+  }
+
+  const faixas2 = {
+    scales: {
+        y: {
+          suggestedMin: 0,
+          suggestedMax: 35,
+        },
+        
+      },
+    plugins: {
+    autocolors: false,
+    annotation: {
+      annotations: {
+        line1: {
+          type: 'line',
+          yMin: 2,
+          yMax: 2,
+          borderColor: 'green',
+          borderWidth: 1,
+        },
+        line2: {
+          type: 'line',
+          yMin: 3,
+          yMax: 3,
+          borderColor: 'green',
+          borderWidth: 1,
+        },
+        
+      }
+    }
+  }
+  }
+
+
   /* Quadro 1 Gondola */
   const config = {
     type: "line",
     data: data,
-    options: {},
+    options: faixas
   };
 
   const config2 = {
@@ -1011,7 +1106,7 @@
   const config3 = {
     type: "line",
     data: data3,
-    options: {},
+    options: faixas2
   };
 
   const config4 = {
@@ -1028,7 +1123,7 @@
   const config5 = {
     type: "line",
     data: data5,
-    options: {},
+    options: faixas
   }
 
   const config6 = {
@@ -1045,7 +1140,7 @@
   const config7 = {
     type: "line",
     data: data7,
-    options: {},
+    options: faixas2
   }
 
   const config8 = {
@@ -1079,5 +1174,6 @@
 
   const myChart8 = new Chart(document.getElementById("myChart8"), config8);
 </script>
+
 
 <script src="../js/scriptmodais.js"></script>
