@@ -82,13 +82,6 @@
             //finalizarAguardar();
             return false;
         }
-        else if (!emailVar.includes("@") && !emailVar.includes(".") ||
-        (!emailVar.includes("@") || !emailVar.includes("."))) {
-            alert('Digite um email válido!')
-        }
-        else if (senhaVar != confirmSenhaVar) {
-            alert('A senha e a confirmação não coincidem!')
-        }
         else {
             //setInterval(sumirMensagem, 5000)
         }
@@ -125,23 +118,7 @@
             } else {
 
                 throw ("Houve um erro ao tentar realizar o cadastro!");
-                alert("Senha ou email incorretos!");
-                inpNome.value = "";
-                inpEmail.value = "";
-                inpSenha.value = "";
-                confirmSenha.value = "";
-                inpNome.style.borderColor = "red";
-                inpEmail.style.borderColor = "red";
-                inpSenha.style.borderColor = "red";
-                confirmSenha.style.borderColor = "red";
-                inpNome.style.transition = "0.5s";
-                inpEmail.style.transition = "0.5s";
-                inpSenha.style.transition = "0.5s";
-                confirmSenha.style.transition = "0.5s";
-                inpNome.placeholder = "Digite seu nome";
-                inpEmail.placeholder = "Digite seu e-mail";
-                inpSenha.placeholder = "Digite sua senha";
-                confirmSenha.placeholder = "Confirme sua senha";
+                
                 
             }
         }).catch(function (resposta) {

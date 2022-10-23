@@ -91,21 +91,20 @@
                });
 
            } else {
-                /*alert("Senha ou email incorretos!");
+                alert("Senha ou email incorretos!");
                 inpEmail.style.borderColor = "red";
                 inpSenha.style.borderColor = "red";
-                inpSenha.style.transition = "0.5s";
-                inpEmail.style.transition = "0.5s";
+                inpSenha.style.transition = "1s";
+                inpEmail.style.transition = "1s";
                 inpEmail.value = "";
                 inpSenha.value = "";
                 inpEmail.placeholder = "Email incorreto!";
                 inpSenha.placeholder = "Senha incorreta!";
-                inpEmail.focus();*/
+                inpEmail.focus();
                 
 
             
                console.log("Houve um erro ao tentar realizar o login!");
-                alert("Senha ou email incorretos!");
                resposta.text().then(texto => {
                    console.error(texto);
                    //finalizarAguardar(texto);
