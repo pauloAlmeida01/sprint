@@ -23,21 +23,21 @@
         
         <div class="form-input">
             <p>Nome:</p>
-            <input type="text" id="nome" placeholder="Digite seu nome">
+            <input type="text" id="inpNome" placeholder="Digite seu nome">
         </div>
 
        
 
         <div class="form-input">
             <p>E-mail:</p>
-            <input type="email" placeholder="Digite seu e-mail" id="email">
+            <input type="email" placeholder="Digite seu e-mail" id="inpEmail">
         </div>
         
 
         <div class="form-input">
             <p>Senha:</p>
             <div class="form-login-password1">
-        <input type="password" placeholder="Digite sua senha" class="senha" id="senha">
+        <input type="password" placeholder="Digite sua senha" class="senha" id="inpSenha">
         <img src="./assets/icon/eye.png" alt="olho" class="btn">
 
         </div>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="form-button">
-        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="verify()">Cadastrar</button>
         </div>
     </div>
 </div>
@@ -66,18 +66,18 @@
 
 <script>
     function cadastrar() {
-       // aguardar();
+        // aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome.value
-        var emailVar = email.value
-        var senhaVar = senha.value
+        var nomeVar = inpNome.value
+        var emailVar = inpEmail.value
+        var senhaVar = inpSenha.value
         var confirmSenhaVar = confirmSenha.value
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmSenhaVar == "") {
             //cardErro.style.display = "block"
-            alert("Mensagem de erro para todos os campos em branco")
+            alert("Preencha todos os campos")
 
             //finalizarAguardar();
             return false;
@@ -116,10 +116,29 @@
                 //limparFormulario();
                 //finalizarAguardar();
             } else {
+
                 throw ("Houve um erro ao tentar realizar o cadastro!");
+                alert("Senha ou email incorretos!");
+                inpNome.value = "";
+                inpEmail.value = "";
+                inpSenha.value = "";
+                confirmSenha.value = "";
+                inpNome.style.borderColor = "red";
+                inpEmail.style.borderColor = "red";
+                inpSenha.style.borderColor = "red";
+                confirmSenha.style.borderColor = "red";
+                inpNome.style.transition = "0.5s";
+                inpEmail.style.transition = "0.5s";
+                inpSenha.style.transition = "0.5s";
+                confirmSenha.style.transition = "0.5s";
+                inpNome.placeholder = "Digite seu nome";
+                inpEmail.placeholder = "Digite seu e-mail";
+                inpSenha.placeholder = "Digite sua senha";
+                confirmSenha.placeholder = "Confirme sua senha";
+                
             }
         }).catch(function (resposta) {
-            alert("Email ou CPNJ já existente!");
+            alert("Email já existente!");
             console.log(`#ERRO: ${resposta}`);
             //finalizarAguardar();
         });

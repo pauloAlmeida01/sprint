@@ -1,4 +1,5 @@
 var usuarioModel = require("../models/usuarioModel");
+var database = require("../database/config");
 
 var sessoes = [];
 
@@ -79,11 +80,22 @@ function cadastrar(req, res) {
 
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-       
-        usuarioModel.cadastrar(nome, email, senha)
+        
+        usuarioModel.verificar(nome, email, senha)
             .then(
                 function (resultado) {
-                    res.json(resultado);
+                    console.log(`\nResultados encontrados: ${resultado.length}`);
+                    console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+
+                    if (resultado.length == 1) {
+                        res.status(403).send("Email já cadastrado!");
+                    } else if (resultado.length == 0) {
+                        console.log(resultado);
+                        res.json(resultado[0]);
+                        usuarioModel.cadastrar(nome, email, senha)
+                    } else {
+                        res.status(403).send("Email já cadastrado!");
+                    }
                 }
             ).catch(
                 function (erro) {
@@ -96,6 +108,7 @@ function cadastrar(req, res) {
                 }
 
             );
+        
 
 
     

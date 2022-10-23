@@ -284,7 +284,7 @@
         <figure>
           <img src="../assets/imgs/Agreen.png" alt="logo" />
         </figure>
-        <p>Olá Usuário!</p>
+        <p id="p_usuario">Olá Usuario</p>
 
         <ul>
           <li><a href="dashboard.html">Cards</a></li>
@@ -501,16 +501,16 @@
 
           <p class="card-title">Gôndola 1</p>
 
-          <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
-          <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
-          <span class="card-span">Variação de temperatura Sem.: 25&deg;</span>
+          <span class="card-span">Ultima captura (temperatura): 22&deg;</span>
+          <span class="card-span">Ultima captura (umidade): 65%</span>
+          <span class="card-span">Variação de temperatura: 25&deg;</span>
 
 
 
           <button class="btn-card" onclick="openModal()">Ver Gráficos</button>
 
           <svg height="80" width="60">
-            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" />
+            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" fill="green"/>
           </svg>
         </div>
 
@@ -518,9 +518,9 @@
         <div class="card">
           <p class="card-title">Freezer 1</p>
 
-          <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
-          <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
-          <span class="card-span">Variação de temperatura Sem.: 25&deg;</span>
+          <span class="card-span">Ultima captura (temperatura): 5&deg;</span>
+          <span class="card-span">Ultima captura (umidade): 60%</span>
+          <span class="card-span">Variação de temperatura: 3&deg;</span>
 
 
 
@@ -540,16 +540,16 @@
         <div class="card">
           <p class="card-title">Gôndola 2</p>
 
-          <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
-          <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
-          <span class="card-span">Variação de temperatura Sem.: 25&deg;</span>
+          <span class="card-span">Ultima captura (temperatura): 25&deg;</span>
+          <span class="card-span">Ultima captura (umidade): 62%</span>
+          <span class="card-span">Variação de temperatura: 3&deg;</span>
 
 
 
           <button class="btn-card" onclick="openModal3()">Ver Gráficos</button>
 
           <svg height="80" width="60">
-            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" />
+            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" fill="yellow" />
           </svg>
 
         </div>
@@ -575,16 +575,16 @@
 
           <p class="card-title">Freezer 2</p>
 
-          <span class="card-span">Temperatura Máxima Sem.: 25&deg;</span>
-          <span class="card-span">Temperatura Mìnima Sem.: 25&deg;</span>
-          <span class="card-span">Variação de temperatura Sem.: 25&deg;</span>
+          <span class="card-span">Ultima captura (temperatura): 2.5&deg;</span>
+          <span class="card-span">Ultima captura (umidade): 90%</span>
+          <span class="card-span">Variação de temperatura: 1&deg;</span>
 
 
 
           <button class="btn-card" onclick="openModal4()">Ver Gráficos</button>
 
           <svg height="80" width="60">
-            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" />
+            <circle cx="40" cy="18" r="16" stroke="black" stroke-width="0" fill="green"/>
           </svg>
 
         </div>
@@ -707,9 +707,9 @@
     </script>
 
 <script>
-  /*
+
     
-  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+  p_usuario.innerHTML = "Olá " + sessionStorage.NOME_USUARIO;
   
   let proximaAtualizacao;
       
@@ -875,7 +875,7 @@
           });
 
   }
-  */
+
 </script>
    
 <script>
