@@ -63,6 +63,7 @@ const senha = document.querySelector('.senha');
     //     else{
     //         campos_validos = 'yes'
     //     }
+<<<<<<< HEAD
 
     // if (campos_validos == 'yes') {
         //         window.location.replace("cadastro-2.html")
@@ -70,3 +71,10 @@ const senha = document.querySelector('.senha');
         // }
 
         
+=======
+        
+    //     if (campos_validos == 'yes') {
+    //         window.location.replace("cadastro-2.html")
+    //     }
+    // }
+>>>>>>> 4034e4f97c1b5f14bc39dd895da7513ec8d94862
