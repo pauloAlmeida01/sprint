@@ -22,37 +22,51 @@ const senha = document.querySelector('.senha');
         }
     }
     }
-    function verify() {
-        var nome = inpNome.value
-        var senha = inpSenha.value
-        var confirmacao = confirmSenha.value
-        var email = inpEmail.value
-        var campos_validos = 'no'
-        if(nome == '' && senha == '' && confirmacao == '' && email == '') {
-            alert('Preencha todos os campos!')
-        }
-        else if (nome == '') {
-            alert('Digite seu nome!')
-        }
-        else if (email == '') {
-            alert('Digite o seu email')
-        }
-        else if (!email.includes("@") && !email.includes(".")) {
-            alert('Digite um email válido!')
-        }
-        else if (senha == '') {
-            alert('Digite sua senha.')
-        }
-        else if (confirmacao == '') {
-            alert('Não se esqueça de confirmar sua senha.')
-        }
-        else if (senha != confirmacao) {
-            alert('A senha e a confirmação não coincidem!')
-        }
-        else{
-            campos_validos = 'yes'
-            cadastrar();
-        }
+    // function cadastrar() {
+    //     var nome = ipt_nome.value
+    //     var telefone = ipt_telefone.value
+    //     var cnpj = ipt_cnpj.value
+    //     var senha = ipt_senha.value
+    //     var confirmacao = ipt_confirmSenha.value
+    //     var email = ipt_email.value
+    //     var campos_validos = 'no'
+    //     if (nome == '') {
+    //         alert('Digite seu nome!')
+    //     }
+    //     else if (telefone == '') {
+    //         alert('Você precisa digitar o seu telefone!')
+    //     }
+    //     else if (telefone.length < 10 || telefone.length > 10) {
+    //         alert('Digite um número de telefone válido!')
+    //     }
+    //     else if (cnpj == '') {
+    //         alert('Você precisa digitar seu CNPJ!')
+    //     }
+    //     else if (email == '') {
+    //         alert('Digite o seu email')
+    //     }
+    //     else if (!email.includes("@") && !email.includes(".")) {
+    //         alert('Digite um email válido!')
+    //     }
+    //     else if (senha == '') {
+    //         alert('Digite sua senha.')
+    //     }
+    //     else if (confirmacao == '') {
+    //         alert('Não se esqueça de confirmar sua senha.')
+    //     }
+    //     else if (cnpj.length < 14 || cnpj.lenght > 14) {
+    //         alert('Digite um CNPJ válido!')
+    //     }
+    //     else if (senha != confirmacao) {
+    //         alert('A senha e a confirmação não coincidem!')
+    //     }
+    //     else{
+    //         campos_validos = 'yes'
+    //     }
+
+    // if (campos_validos == 'yes') {
+        //         window.location.replace("cadastro-2.html")
+        //     }
+        // }
 
         
-    }

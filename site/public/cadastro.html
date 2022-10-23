@@ -77,10 +77,17 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmSenhaVar == "") {
             //cardErro.style.display = "block"
-            alert("Preencha todos os campos")
+            alert("Por favor preencha todos os campos!")
 
             //finalizarAguardar();
             return false;
+        }
+        else if (!emailVar.includes("@") && !emailVar.includes(".") ||
+        (!emailVar.includes("@") || !emailVar.includes("."))) {
+            alert('Digite um email válido!')
+        }
+        else if (senhaVar != confirmSenhaVar) {
+            alert('A senha e a confirmação não coincidem!')
         }
         else {
             //setInterval(sumirMensagem, 5000)
