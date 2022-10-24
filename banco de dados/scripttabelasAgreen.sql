@@ -34,12 +34,12 @@ primary key (idEndereco, fkempresa)
  
 create table sensor (
 idSensor int,
-fkSensorEmpresa int,
-constraint fkSensorEmpresa foreign key (fkSensorEmpresa)
+fkEmpresa int,
+foreign key (fkEmpresa)
 references empresa (idEmpresa),
 atividade varchar (45),
 nome varchar(45),
-primary key (idSensor, fkSensorEmpresa)
+primary key (idSensor, fkEmpresa)
 );
 
 create table leitura (
@@ -48,11 +48,11 @@ temperatura DECIMAL (3,1),
 umidade DECIMAL (3,1),
 data_horario datetime,
 fksensor int,
-constraint fksensor foreign key (fksensor)
+foreign key (fksensor)
 references sensor (idSensor),
-fkSensorEmpresa int,
-constraint fkSensordaEmpresa foreign key (fkSensorEmpresa)
-references sensor (fkSensorEmpresa)
+fkEmpresa int,
+foreign key (fkEmpresa)
+references sensor (fkEmpresa)
 );
 
 INSERT INTO empresa VALUES
@@ -107,7 +107,7 @@ INSERT INTO leitura VALUES
              l.data_horario as Dia_hora
              FROM empresa as e
              JOIN sensor as s
-             ON idEmpresa = fkSensorEmpresa 
+             ON idEmpresa = fkEmpresa 
              JOIN leitura as l
              ON idSensor = fkSensor;
              
@@ -119,7 +119,7 @@ INSERT INTO leitura VALUES
              l.data_horario as Dia_hora
              FROM empresa as e
              JOIN sensor as s
-             ON idEmpresa = fkSensorEmpresa 
+             ON idEmpresa = fkEmpresa 
              JOIN leitura as l
              ON idSensor = fkSensor
              where idEmpresa = 1;
@@ -131,7 +131,7 @@ INSERT INTO leitura VALUES
              l.data_horario as Dia_hora
              FROM empresa as e
              JOIN sensor as s
-             ON idEmpresa = fkSensorEmpresa 
+             ON idEmpresa = fkEmpresa 
              JOIN leitura as l
              ON idSensor = fkSensor
              where idEmpresa = 2;
@@ -143,7 +143,7 @@ INSERT INTO leitura VALUES
              l.data_horario as Dia_hora
              FROM empresa as e
              JOIN sensor as s
-             ON idEmpresa = fkSensorEmpresa 
+             ON idEmpresa = fkEmpresa 
              JOIN leitura as l
              ON idSensor = fkSensor
              where idEmpresa = 3;
