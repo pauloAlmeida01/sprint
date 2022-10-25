@@ -44,8 +44,8 @@ primary key (idSensor, fkEmpresa)
 
 create table leitura (
 idLeitura int primary key auto_increment,
-temperatura DECIMAL (3,1),
-umidade DECIMAL (3,1),
+temperatura DECIMAL (5,2),
+umidade DECIMAL (5,2),
 data_horario datetime,
 fksensor int,
 foreign key (fksensor)
