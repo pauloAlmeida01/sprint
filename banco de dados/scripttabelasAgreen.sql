@@ -132,22 +132,3 @@ INSERT INTO leitura VALUES
         JOIN sensor as s
         ON IdEmpresa = fkEmpresa;
         
-    -- Endereço
-	-- SELECT e.nome as NomeEmpresa,
-	-- 		c.cep as CEP,
-	-- 		c.rua as Rua,
-    --      c.bairro as Bairro,
-    --      c.complemento as Complemento
-	--      FROM empresa as e 
-    --      JOIN enderecoEmpresa as c
-	--      ON idempresa = fkempresa;
-
-	-- Usuario + empresa
-
-	-- SELECT e.nome as NomeEmpresa,
-	-- 	u.nome as NomeUsuario,
-    --      u.email as Email,
-    --      u.senha as senha
-    --      FROM empresa as e
-	--      JOIN usuario as u
-    --      ON idempresa = fkempresa;
