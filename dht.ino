@@ -30,7 +30,9 @@ float u4 = umidadeProjeto*1.05;
 float u5 = umidadeProjeto*1.20;
 
 float temperatura = dht_1.readTemperature();
-float temperaturaProjeto = 1.9*temperatura-27.68;
+
+
+float temperaturaProjeto
 float t2 = temperatura*1.10;
 float t3 = temperatura*0.95;
 float t4 = temperatura+1.25;
@@ -77,27 +79,13 @@ delay(2000);
 /**
 * Bloco do LM35
 */
-leitura_lm35 = analogRead(lm35_pin);
-temperatura = leitura_lm35 * (5.0/1023) * 100;
-Serial.print(temperatura);
-Serial.print(";");
+
 /**
 * Bloco do LDR5
 */
-leitura_ldr = analogRead(ldr_pin);
-Serial.print(leitura_ldr);
-Serial.print(";");
 
 /**
 * Bloco do TCRT5000
 */
-if(digitalRead(switch_pin) == LOW){
-Serial.println(1);
-}
-else {
-Serial.println(0);
-}
-delay(2000);
-
 
 }
