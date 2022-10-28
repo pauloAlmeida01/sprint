@@ -23,7 +23,7 @@ void loop()
 * Bloco do DHT11
 */
 float umidade = dht_1.readHumidity();
-float umidadeProjeto = 1.8*umidade-73.6;
+float umidadeProjeto = 1.8*umidade-63.6;
 float u2 = umidadeProjeto*1.10;
 float u3 = umidadeProjeto*1.15;
 float u4 = umidadeProjeto*1.05;
@@ -31,12 +31,11 @@ float u5 = umidadeProjeto*1.20;
 
 float temperatura = dht_1.readTemperature();
 
-
-float temperaturaProjeto
-float t2 = temperatura*1.10;
-float t3 = temperatura*0.95;
-float t4 = temperatura+1.25;
-float t5 = temperatura*1.15;
+float temperaturaProjeto = 1.8*temperatura-25.6;
+float t2 = temperaturaProjeto*1.10;
+float t3 = temperaturaProjeto*0.95;
+float t4 = temperaturaProjeto+1.25;
+float t5 = temperaturaProjeto*1.15;
 
 
 if (isnan(temperatura) or isnan(umidade))
@@ -56,18 +55,18 @@ Serial.print(";");
 Serial.print(u4);
 Serial.print(";");
 Serial.print(u5);
-Serial.println(";");
+Serial.print(";");
 
-Serial.println(temperatura);
+Serial.print(temperaturaProjeto);
 Serial.print(";");
-Serial.println(t2);
+Serial.print(t2);
 Serial.print(";");
-Serial.println(t3);
+Serial.print(t3);
 Serial.print(";");
-Serial.println(t4);
+Serial.print(t4);
 Serial.print(";");
-Serial.println(t5);
-Serial.print(";");
+Serial.print(t5);
+Serial.println(";");
 
 
 
