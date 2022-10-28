@@ -166,7 +166,11 @@ insert into contato values
 	select c.nome as PrimeiroContato,
 	e.nome as ContratoFeito from contato as c
 		 join empresa as e 
+<<<<<<< HEAD
 			where e.nome = 'Carrefour';
             
 drop table leitura;
+=======
+			where c.nome = 'Carrefour';
+>>>>>>> 32caf33e8366854d3b27f86f1456e6c5d87dd5da
         
