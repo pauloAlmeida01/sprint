@@ -30,9 +30,7 @@ const serial = async (
     valoresDht11Temperatura4,
     valoresDht11Temperatura5,
     
-    valoresLuminosidade,
-    valoresLm35Temperatura,
-    valoresChave
+
 ) => {
     let poolBancoDados = ''
 
@@ -161,9 +159,7 @@ const servidor = (
     valoresDht11Temperatura3,
     valoresDht11Temperatura4,
     valoresDht11Temperatura5,
-    valoresLuminosidade,
-    valoresLm35Temperatura,
-    valoresChave
+
 ) => {
     const app = express();
     app.use((request, response, next) => {
@@ -204,15 +200,7 @@ const servidor = (
     app.get('/sensores/dht11/temperatura5', (_, response) => {
         return response.json(valoresDht11Temperatura5);
     });
-    app.get('/sensores/luminosidade', (_, response) => {
-        return response.json(valoresLuminosidade);
-    });
-    app.get('/sensores/lm35/temperatura', (_, response) => {
-        return response.json(valoresLm35Temperatura);
-    });
-    app.get('/sensores/chave', (_, response) => {
-        return response.json(valoresChave);
-    });
+
 }
 
 (async () => {
@@ -227,9 +215,7 @@ const servidor = (
 
     const valoresDht11Temperatura4 = [];
     const valoresDht11Temperatura5 = [];
-    const valoresLuminosidade = [];
-    const valoresLm35Temperatura = [];
-    const valoresChave = [];
+
     await serial(
         valoresDht11Umidade,
         valoresDht11Umidade2,
@@ -242,9 +228,7 @@ const servidor = (
     valoresDht11Temperatura3,
     valoresDht11Temperatura4,
     valoresDht11Temperatura5,
-        valoresLuminosidade,
-        valoresLm35Temperatura,
-        valoresChave
+
     );
     servidor(
         valoresDht11Umidade,
@@ -257,8 +241,6 @@ const servidor = (
     valoresDht11Temperatura3,
     valoresDht11Temperatura4,
     valoresDht11Temperatura5,
-        valoresLuminosidade,
-        valoresLm35Temperatura,
-        valoresChave
+
     );
 })();

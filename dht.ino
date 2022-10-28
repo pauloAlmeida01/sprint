@@ -23,7 +23,7 @@ void loop()
 * Bloco do DHT11
 */
 float umidade = dht_1.readHumidity();
-float umidadeProjeto = 1.8*umidade-63.6;
+float umidadeProjeto = 1.8*umidade-73.6;
 float u2 = umidadeProjeto*1.10;
 float u3 = umidadeProjeto*1.15;
 float u4 = umidadeProjeto*1.05;

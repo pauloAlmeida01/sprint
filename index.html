@@ -58,18 +58,6 @@
         <section style="width: 100%;">
             <canvas id="dht11Temperatura5"></canvas>
         </section>
-        <h1>Sensor Luminosidade</h1>
-        <section style="width: 100%;">
-            <canvas id="luminosidade"></canvas>
-        </section>
-        <h1>Sensor LM 35 - Temperatura</h1>
-        <section style="width: 100%;">
-            <canvas id="lm35Temperatura"></canvas>
-        </section>
-        <h1>Sensor Chave</h1>
-        <section style="width: 100%;">
-            <canvas id="chave"></canvas>
-        </section>
     </div>
 
     <script>
@@ -510,126 +498,6 @@
                 }
             }
         );
-        /* -- luminosidade -- */
-        var contextoLuminosidade = document.getElementById('luminosidade').getContext('2d');
-        contextoLuminosidade.canvas.width = 1000;
-        contextoLuminosidade.canvas.height = 300;
-        var luminosidade = new Chart(
-            contextoLuminosidade,
-            {
-                type: 'line',
-                data: {
-                    datasets: [{
-                        label: 'Luminosidade',
-                        type: 'line',
-                        borderColor: ['#ffd902'],
-                        backgroundColor: ['#ffe135']
-                    }]
-                },
-                options: {
-                    scales: {
-                        xAxes: [{
-                            distribution: 'series',
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        yAxes: [{
-                            scaleLabel: {
-                                display: true,
-                                labelString: 'Luminosidade'
-                            },
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    },
-                    animation: {
-                        duration: 0
-                    }
-                }
-            }
-        );
-        /* -- lm35Temperatura */
-        var contextoLm35Temperatura = document.getElementById('lm35Temperatura').getContext('2d');
-        contextoLm35Temperatura.canvas.width = 1000;
-        contextoLm35Temperatura.canvas.height = 300;
-        var lm35Temperatura = new Chart(
-            contextoLm35Temperatura,
-            {
-                type: 'line',
-                data: {
-                    datasets: [{
-                        label: 'Temperatura',
-                        type: 'line',
-                        borderColor: ['#ffd902'],
-                        backgroundColor: ['#ffe135']
-                    }]
-                },
-                options: {
-                    scales: {
-                        xAxes: [{
-                            distribution: 'series',
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        yAxes: [{
-                            scaleLabel: {
-                                display: true,
-                                labelString: 'Temperatura'
-                            },
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    },
-                    animation: {
-                        duration: 0
-                    }
-                }
-            }
-        );
-        /* -- chave */
-        var contextoChave = document.getElementById('chave').getContext('2d');
-        contextoChave.canvas.width = 1000;
-        contextoChave.canvas.height = 300;
-        var chave = new Chart(
-            contextoChave,
-            {
-                type: 'line',
-                data: {
-                    datasets: [{
-                        label: 'Chave',
-                        type: 'line',
-                        borderColor: ['#ffd902'],
-                        backgroundColor: ['#ffe135']
-                    }]
-                },
-                options: {
-                    scales: {
-                        xAxes: [{
-                            distribution: 'series',
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                        yAxes: [{
-                            scaleLabel: {
-                                display: true,
-                                labelString: 'Chave'
-                            },
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    },
-                    animation: {
-                        duration: 0
-                    }
-                }
-            }
-        );
 
         var paginacao = {};
         var tempo = {};
@@ -668,13 +536,10 @@
             obterDados(dht11Umidade4, 'dht11/umidade4');
             obterDados(dht11Umidade5, 'dht11/umidade5');
             obterDados(dht11Temperatura, 'dht11/temperatura');
-            obterDados(dht11Temperatura, 'dht11/temperatura2');
-            obterDados(dht11Temperatura, 'dht11/temperatura3');
-            obterDados(dht11Temperatura, 'dht11/temperatura4');
-            obterDados(dht11Temperatura, 'dht11/temperatura5');
-            obterDados(luminosidade, 'luminosidade');
-            obterDados(lm35Temperatura, 'lm35/temperatura');
-            obterDados(chave, 'chave');
+            obterDados(dht11Temperatura2, 'dht11/temperatura2');
+            obterDados(dht11Temperatura3, 'dht11/temperatura3');
+            obterDados(dht11Temperatura4, 'dht11/temperatura4');
+            obterDados(dht11Temperatura5, 'dht11/temperatura5');
         }, 1000);
 
     </script>
