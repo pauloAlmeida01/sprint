@@ -55,6 +55,16 @@ foreign key (fkEmpresa)
 references sensor (fkEmpresa)
 );
 
+create table contato (
+idContato int primary key auto_increment,
+nome varchar (45),
+email varchar (45),
+telFixo char (11),
+mensagem varchar (200)
+);
+
+
+
 INSERT INTO empresa VALUES
 (null, 'Barcelona Comércio Varejista e Atacadista S/A', 'Assai', 55343752000147, 1122446688),
 (null, 'Carrefour Comercio e Industria Ltda', 'Carrefour', 31573781000137, 11212343245),
@@ -88,18 +98,22 @@ INSERT INTO sensor VALUES
 (4, 3, 'ativo', 'Sensor Freezer 2');
 
 INSERT INTO leitura VALUES
-(1,'22.5','75','1999-01-01 01:00:00',1, 2),
-(2,'23.5','80','1999-01-01 02:00:00',1, 1),
-(3,'1.5','85','1999-01-01 03:00:00', 1, 3),
-(4,'4.9','81','1999-01-01 04:00:00', 2, 1),
-(5,'13.7','81','1999-01-01 05:00:00', 2, 2),
-(6,'20.5','81','1999-01-01 06:00:00', 2, 3),
-(7,'10.1','81','1999-01-01 07:00:00', 3, 1),
-(8,'30.2','81','1999-01-01 08:00:00', 3, 2),
-(9,'22.4','81','1999-01-01 09:00:00', 3, 3);
+(1,'22.5','75','2022-01-01 01:00:00',1, 2),
+(2,'23.5','80','2022-01-01 02:00:00',1, 1),
+(3,'1.5','85','2022-01-01 03:00:00', 1, 3),
+(4,'4.9','81','2022-01-01 04:00:00', 2, 1),
+(5,'13.7','81','2022-01-01 05:00:00', 2, 2),
+(6,'20.5','81','2022-01-01 06:00:00', 2, 3),
+(7,'10.1','81','2022-01-01 07:00:00', 3, 1),
+(8,'30.2','81','2022-01-01 08:00:00', 3, 2),
+(9,'22.4','81','2022-01-01 09:00:00', 3, 3);
 
-	-- Dados Sensores
-    
+insert into contato values 
+(null, 'Carrefour', 'negocios@carrefour.com.br', 11212343245, 'Gostaríamos de agendar uma visita técnica para realizar orçamento.');
+
+
+
+	-- Dados Sensores empresa especifica
 	 SELECT e.nome as NomeEmpresa,
 			s.nome as LocalSensor,
              l.temperatura as Temperatura,
@@ -111,7 +125,8 @@ INSERT INTO leitura VALUES
              JOIN leitura as l
              ON idSensor = fkSensor
              where idEmpresa = 1;
-             
+         
+-- empresa e local especifico         
      SELECT e.nome as NomeEmpresa,
 			s.nome as LocalSensor,
              l.temperatura as Temperatura,
@@ -125,10 +140,33 @@ INSERT INTO leitura VALUES
              where idEmpresa = 1
              and s.nome LIKE '%Gondola%';
              
+-- empresa, local e data/horario especificos
+               SELECT e.nome as NomeEmpresa,
+			s.nome as LocalSensor,
+             l.temperatura as Temperatura,
+             l.umidade as Umidade,
+             l.data_horario as Dia_hora
+             FROM empresa as e
+             JOIN sensor as s
+             ON idEmpresa = fkEmpresa 
+             JOIN leitura as l
+             ON idSensor = fkSensor
+             where idEmpresa = 3
+             and s.nome LIKE '%Gondola%'
+             and l.data_horario = '1999-01-01 06:00:00';
              
+-- atividade dos sensores
 	SELECT e.nome as NomeEmpresa,
 		s.nome as LocasSensor,
         s.atividade FROM empresa as e
         JOIN sensor as s
         ON IdEmpresa = fkEmpresa;
+        
+-- confirmacao primeiro contato
+	select c.nome as PrimeiroContato,
+	e.nome as ContratoFeito from contato as c
+		 join empresa as e 
+			where e.nome = 'Carrefour';
+            
+drop table leitura;
         
